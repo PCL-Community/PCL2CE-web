@@ -4,80 +4,80 @@
       <div class="version-card">
         <div class="version-header">
           <div>
-            <div class="version-name">PCL 社区版下载</div>
-            <span class="version-tag stable">最新稳定版</span>
+            <div class="version-name">{{ t('download.title') }}</div>
+            <span class="version-tag stable">{{ t('download.latestStable') }}</span>
           </div>
         </div>
         <div class="changelog">
-          <p>按下 Win + S键打开搜索，搜索 系统信息 并打开。</p>
-          <p>查看 系统类型：</p>
-          <p>若显示 x64 电脑 → 下载 X64 版本。</p>
-          <p>若显示 ARM64 电脑 → 下载 ARM64 版本。</p>
-          <p style="font-size: 20px">💡 小提示:</p>
-          <p>常规台式机/笔记本通常为 X64。</p>
-          <p>ARM64 主要用于微软 Surface Pro X 等设备。</p>
-          <p>若不确定，优先选 X64（兼容性更广），若不可用再选 ARM64。</p>
+          <p>{{ t('download.systemCheck.line1') }}</p>
+          <p>{{ t('download.systemCheck.line2') }}</p>
+          <p>{{ t('download.systemCheck.line3') }}</p>
+          <p>{{ t('download.systemCheck.line4') }}</p>
+          <p style="font-size: 20px">{{ t('download.systemCheck.tip') }}</p>
+          <p>{{ t('download.systemCheck.tip1') }}</p>
+          <p>{{ t('download.systemCheck.tip2') }}</p>
+          <p>{{ t('download.systemCheck.tip3') }}</p>
         </div>
 
         <!-- 隐私协议提示 -->
         <div class="privacy-notice">
-          <p>如果您点击下方任意下载并运行程序，代表同意我们的隐私协议，隐私协议请点击下方链接查看</p>
-          <a href="https://www.pclc.cc/privacy/" target="_blank">https://www.pclc.cc/privacy/</a>
+          <p>{{ t('download.privacyNotice.text') }}</p>
+          <a :href="t('download.privacyNotice.link')" target="_blank">{{ t('download.privacyNotice.link') }}</a>
         </div>
 
         <div class="download-grid">
           <div class="download-option">
-            <h3>X64 版本</h3>
-            <p>适用于大多数 Windows 电脑</p>
+            <h3>{{ t('download.versions.x64.title') }}</h3>
+            <p>{{ t('download.versions.x64.desc') }}</p>
             <div class="download-mirrors">
               <a
                 href="https://github.com/PCL-Community/PCL2-CE/releases/latest/download/PCL2_CE_Release_x64.exe"
                 class="mirror-btn"
               >
-                GitHub（境内下载可能较慢）
+                {{ t('download.mirrors.github') }}
               </a>
               <a
                 href="https://download.fishcpy.top/dl/pclce/pcl2ce/PCL2_CE_Release_x64.exe"
                 class="mirror-btn"
               >
-                线路1
+                {{ t('download.mirrors.mirror1') }}
               </a>
-              <a href="https://scdn.星.fun/PCL2_CE_Release_x64.exe" class="mirror-btn"> 线路4 </a>
+              <a href="https://scdn.星.fun/PCL2_CE_Release_x64.exe" class="mirror-btn"> {{ t('download.mirrors.mirror4') }} </a>
             </div>
           </div>
 
           <div class="download-option">
-            <h3>ARM64 版本</h3>
-            <p>适用于 ARM 架构的 Windows 电脑</p>
+            <h3>{{ t('download.versions.arm64.title') }}</h3>
+            <p>{{ t('download.versions.arm64.desc') }}</p>
             <div class="download-mirrors">
               <a
                 href="https://github.com/PCL-Community/PCL2-CE/releases/latest/download/PCL2_CE_Release_ARM64.exe"
                 class="mirror-btn"
               >
-                GitHub（境内下载可能较慢）
+                {{ t('download.mirrors.github') }}
               </a>
               <a
                 href="https://download.fishcpy.top/dl/pclce/pcl2ce/PCL2_CE_Release_ARM64.exe"
                 class="mirror-btn"
               >
-                线路1
+                {{ t('download.mirrors.mirror1') }}
               </a>
-              <a href="https://scdn.星.fun/PCL2_CE_Release_ARM64.exe" class="mirror-btn"> 线路4 </a>
+              <a href="https://scdn.星.fun/PCL2_CE_Release_ARM64.exe" class="mirror-btn"> {{ t('download.mirrors.mirror4') }} </a>
             </div>
           </div>
         </div>
       </div>
 
       <div class="historical-versions-container">
-        <h2>历史版本下载</h2>
-        <p>如果您需要旧版本的 PCL 社区版，可以从以下链接下载：</p>
+        <h2>{{ t('download.historical.title') }}</h2>
+        <p>{{ t('download.historical.desc') }}</p>
         <ul>
           <li>
             <a
               href="https://github.com/PCL-Community/PCL2-CE/releases"
               target="_blank"
               class="footer-link"
-              >历史版本</a
+              >{{ t('download.historical.link') }}</a
             >
           </li>
         </ul>
@@ -87,7 +87,9 @@
 </template>
 
 <script setup lang="ts">
-// Download view component
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 </script>
 
 <style scoped>
@@ -270,6 +272,7 @@
   padding: 3rem;
   box-shadow: var(--glass-shadow);
   transition: var(--transition);
+  text-align: center;
 }
 
 .historical-versions-container:hover {
@@ -293,6 +296,8 @@
 .historical-versions-container ul {
   list-style: none;
   padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .historical-versions-container li {

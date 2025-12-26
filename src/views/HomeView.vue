@@ -5,12 +5,11 @@
       <div class="hero-content">
         <div class="hero-text">
           <h1 class="hero-title">
-            <span class="title-main">PCL 社区版</span>
-            <span class="title-sub">开源免费的 Minecraft 启动器</span>
+            <span class="title-main">{{ t('home.title') }}</span>
+            <span class="title-sub">{{ t('home.subtitle') }}</span>
           </h1>
           <p class="hero-description">
-            基于龙腾猫跃 PCL2 构建的社区版本，提供更强大的功能和更好的用户体验。
-            支持智能崩溃分析、多文件夹管理、直接下载光影和材质包等特色功能。
+            {{ t('home.description') }}
           </p>
           <div class="hero-buttons">
             <router-link to="/download" class="btn btn-primary btn-large">
@@ -26,21 +25,21 @@
                 <polyline points="7 10 12 15 17 10" />
                 <line x1="12" y1="15" x2="12" y2="3" />
               </svg>
-              <span>下载最新版</span>
+              <span>{{ t('home.downloadLatest') }}</span>
             </router-link>
           </div>
           <div class="hero-stats">
             <div class="stat">
               <span class="stat-number">10K+</span>
-              <span class="stat-label">活跃用户</span>
+              <span class="stat-label">{{ t('home.stats.activeUsers') }}</span>
             </div>
             <div class="stat">
               <span class="stat-number">100%</span>
-              <span class="stat-label">开源免费</span>
+              <span class="stat-label">{{ t('home.stats.openSource') }}</span>
             </div>
             <div class="stat">
               <span class="stat-number">24/7</span>
-              <span class="stat-label">社区支持</span>
+              <span class="stat-label">{{ t('home.stats.communitySupport') }}</span>
             </div>
           </div>
         </div>
@@ -57,8 +56,8 @@
     <section class="demo-section">
       <div class="container">
         <div class="section-header">
-          <h2>PCL 社区版演示视频</h2>
-          <p>观看视频了解 PCL 社区版的强大功能</p>
+          <h2>{{ t('home.videoTitle') }}</h2>
+          <p>{{ t('home.videoDesc') }}</p>
         </div>
         <div class="video-container">
           <iframe
@@ -75,8 +74,8 @@
     <section class="features-section scroll-animate" id="features">
       <div class="container">
         <div class="section-header">
-          <h2>功能特性</h2>
-          <p>为 Minecraft 玩家量身打造的专业启动器</p>
+          <h2>{{ t('home.featuresTitle') }}</h2>
+          <p>{{ t('home.featuresDesc') }}</p>
         </div>
         <div class="features-grid">
           <div class="feature-card">
@@ -92,8 +91,8 @@
                 <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
               </svg>
             </div>
-            <h3>智能崩溃分析</h3>
-            <p>自动检测并分析游戏崩溃原因，提供详细的解决方案和建议，让你快速解决问题。</p>
+            <h3>{{ t('home.features.crashAnalysis.title') }}</h3>
+            <p>{{ t('home.features.crashAnalysis.desc') }}</p>
           </div>
 
           <div class="feature-card">
@@ -109,8 +108,8 @@
                 <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
               </svg>
             </div>
-            <h3>多文件夹管理</h3>
-            <p>支持多个游戏实例管理，不同版本、不同模组包完全隔离，轻松切换游戏环境。</p>
+            <h3>{{ t('home.features.folderManagement.title') }}</h3>
+            <p>{{ t('home.features.folderManagement.desc') }}</p>
           </div>
 
           <div class="feature-card">
@@ -128,8 +127,8 @@
                 <line x1="12" y1="15" x2="12" y2="3" />
               </svg>
             </div>
-            <h3>资源直接下载</h3>
-            <p>内置资源商店，支持直接下载光影、材质包、模组等资源，无需手动安装。</p>
+            <h3>{{ t('home.features.resourceDownload.title') }}</h3>
+            <p>{{ t('home.features.resourceDownload.desc') }}</p>
           </div>
 
           <div class="feature-card">
@@ -146,8 +145,8 @@
                 <circle cx="12" cy="7" r="4" />
               </svg>
             </div>
-            <h3>多账号支持</h3>
-            <p>支持多个 Minecraft 账号管理，快速切换不同账号，支持正版和离线模式。</p>
+            <h3>{{ t('home.features.multiAccount.title') }}</h3>
+            <p>{{ t('home.features.multiAccount.desc') }}</p>
           </div>
 
           <div class="feature-card">
@@ -165,8 +164,8 @@
                 <polyline points="2 12 12 17 22 12" />
               </svg>
             </div>
-            <h3>Java 版本管理</h3>
-            <p>自动检测和管理 Java 版本，为不同的 Minecraft 版本选择最适合的 Java 环境。</p>
+            <h3>{{ t('home.features.javaManagement.title') }}</h3>
+            <p>{{ t('home.features.javaManagement.desc') }}</p>
           </div>
 
           <div class="feature-card">
@@ -184,8 +183,8 @@
                 />
               </svg>
             </div>
-            <h3>开源免费</h3>
-            <p>完全开源的项目，永久免费使用，社区驱动开发，持续更新和改进。</p>
+            <h3>{{ t('home.features.openSource.title') }}</h3>
+            <p>{{ t('home.features.openSource.desc') }}</p>
           </div>
         </div>
       </div>
@@ -195,57 +194,50 @@
     <section class="screenshots-section">
       <div class="container">
         <div class="section-header">
-          <h2>界面预览</h2>
-          <p>直观了解 PCL 社区版的界面设计和功能布局</p>
+          <h2>{{ t('home.screenshotsTitle') }}</h2>
+          <p>{{ t('home.screenshotsDesc') }}</p>
         </div>
 
         <div class="screenshot-row scroll-animate">
           <div class="screenshot-image">
-            <img src="/img/x1.png" alt="主界面" loading="lazy" />
+            <img src="/img/x1.png" alt="Main Interface" loading="lazy" />
           </div>
           <div class="screenshot-content">
-            <h3>主界面</h3>
-            <p>
-              简洁直观的主界面设计，所有功能一目了然。支持深色主题切换，为您提供舒适的使用体验。
-            </p>
+            <h3>{{ t('home.screenshots.main.title') }}</h3>
+            <p>{{ t('home.screenshots.main.desc') }}</p>
             <ul class="feature-highlights">
-              <li>直观的操作体验</li>
-              <li>支持深色主题切换</li>
+              <li>{{ t('home.screenshots.main.features.0') }}</li>
+              <li>{{ t('home.screenshots.main.features.1') }}</li>
             </ul>
           </div>
         </div>
 
         <div class="screenshot-row reverse scroll-animate">
           <div class="screenshot-content">
-            <h3>版本管理</h3>
-            <p>
-              强大的版本管理功能，支持多个 Minecraft
-              版本同时管理。自动下载和安装，版本切换只需一键操作。支持快照版本、正式版本以及各种模组版本。
-            </p>
+            <h3>{{ t('home.screenshots.version.title') }}</h3>
+            <p>{{ t('home.screenshots.version.desc') }}</p>
             <ul class="feature-highlights">
-              <li>多版本并存管理</li>
-              <li>自动下载安装和补全文件</li>
-              <li>一键版本切换</li>
+              <li>{{ t('home.screenshots.version.features.0') }}</li>
+              <li>{{ t('home.screenshots.version.features.1') }}</li>
+              <li>{{ t('home.screenshots.version.features.2') }}</li>
             </ul>
           </div>
           <div class="screenshot-image">
-            <img src="/img/x2.png" alt="版本管理" loading="lazy" />
+            <img src="/img/x2.png" alt="Version Management" loading="lazy" />
           </div>
         </div>
 
         <div class="screenshot-row scroll-animate">
           <div class="screenshot-image">
-            <img src="/img/x3.png" alt="模组管理" loading="lazy" />
+            <img src="/img/x3.png" alt="Mod Management" loading="lazy" />
           </div>
           <div class="screenshot-content">
-            <h3>模组管理</h3>
-            <p>
-              便捷的模组安装和管理系统，支持从多个来源下载模组。提供模组搜索功能，让您轻松找到心仪的模组。
-            </p>
+            <h3>{{ t('home.screenshots.mod.title') }}</h3>
+            <p>{{ t('home.screenshots.mod.desc') }}</p>
             <ul class="feature-highlights">
-              <li>智能模组管理</li>
-              <li>自动依赖检测</li>
-              <li>模组搜索</li>
+              <li>{{ t('home.screenshots.mod.features.0') }}</li>
+              <li>{{ t('home.screenshots.mod.features.1') }}</li>
+              <li>{{ t('home.screenshots.mod.features.2') }}</li>
             </ul>
           </div>
         </div>
@@ -257,8 +249,8 @@
       <div class="container">
         <div class="download-content">
           <div class="download-text">
-            <h2>立即下载</h2>
-            <p>开始你的 Minecraft 之旅，体验最好用的启动器</p>
+            <h2>{{ t('home.downloadSection.title') }}</h2>
+            <p>{{ t('home.downloadSection.desc') }}</p>
             <div class="download-buttons">
               <router-link to="/download" class="btn btn-primary btn-large">
                 <svg
@@ -273,7 +265,7 @@
                   <polyline points="7 10 12 15 17 10" />
                   <line x1="12" y1="15" x2="12" y2="3" />
                 </svg>
-                <span>下载最新版</span>
+                <span>{{ t('home.downloadLatest') }}</span>
               </router-link>
             </div>
           </div>
@@ -281,14 +273,14 @@
             <div class="download-card">
               <div class="card-header">
                 <div class="card-title">
-                  <h3>PCL 社区版</h3>
-                  <span>Community Edition</span>
+                  <h3>{{ t('home.downloadSection.cardTitle') }}</h3>
+                  <span>{{ t('home.downloadSection.cardSubtitle') }}</span>
                 </div>
               </div>
               <div class="card-features">
-                <div class="feature-tag">开源免费</div>
-                <div class="feature-tag">智能管理</div>
-                <div class="feature-tag">社区支持</div>
+                <div class="feature-tag">{{ t('home.downloadSection.tags.0') }}</div>
+                <div class="feature-tag">{{ t('home.downloadSection.tags.1') }}</div>
+                <div class="feature-tag">{{ t('home.downloadSection.tags.2') }}</div>
               </div>
             </div>
           </div>
@@ -300,6 +292,9 @@
 
 <script setup lang="ts">
 import { useScrollAnimation } from '@/composables/useScrollAnimation';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 // 初始化滚动动画
 useScrollAnimation();

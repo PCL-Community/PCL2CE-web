@@ -5,8 +5,8 @@
         <div class="about-content">
           <div class="about-text">
             <div class="section-header">
-              <h2>PCL Community</h2>
-              <p>非官方的 PCL 社区玩家组织，不代表开发者龙腾猫跃和 PCL 官方。</p>
+              <h2>{{ t('about.title') }}</h2>
+              <p>{{ t('about.desc') }}</p>
             </div>
             <div class="about-links">
               <a
@@ -22,8 +22,8 @@
                   </svg>
                 </div>
                 <div class="link-content">
-                  <h4>GitHub</h4>
-                  <p>github.com/PCL-Community</p>
+                  <h4>{{ t('about.links.github.title') }}</h4>
+                  <p>{{ t('about.links.github.url') }}</p>
                 </div>
               </a>
 
@@ -40,8 +40,8 @@
                   </svg>
                 </div>
                 <div class="link-content">
-                  <h4>B 站</h4>
-                  <p>space.bilibili.com/3546847192811755</p>
+                  <h4>{{ t('about.links.bilibili.title') }}</h4>
+                  <p>{{ t('about.links.bilibili.url') }}</p>
                 </div>
               </a>
 
@@ -66,8 +66,8 @@
                   </svg>
                 </div>
                 <div class="link-content">
-                  <h4>加入组织</h4>
-                  <p>github.com/orgs/PCL-Community/discussions/10</p>
+                  <h4>{{ t('about.links.join.title') }}</h4>
+                  <p>{{ t('about.links.join.url') }}</p>
                 </div>
               </a>
             </div>
@@ -84,7 +84,9 @@
 </template>
 
 <script setup lang="ts">
-// About view component
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 </script>
 
 <style scoped>
@@ -167,7 +169,6 @@
 .link-card:hover {
   background: var(--glass-bg-hover);
   border-color: var(--glass-border-hover);
-  transform: translateX(10px);
   box-shadow: var(--glass-shadow-hover);
 }
 
