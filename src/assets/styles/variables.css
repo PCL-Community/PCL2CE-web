@@ -1,0 +1,36 @@
+/* CSS变量定义 */
+:root {
+  --primary: #3498db;
+  --primary-dark: #2980b9;
+  --secondary: #3498db;
+  --accent: #e74c3c;
+  --dark: #1a1a1a;
+  --dark-light: #2d2d2d;
+  --gray: #6c757d;
+  --light: #f8f9fa;
+  --white: #ffffff;
+
+  --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  --gradient-dark: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  --gradient-hero: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.2);
+  --shadow-xl: 0 16px 64px rgba(0, 0, 0, 0.25);
+
+  --border-radius: 8px;
+  --border-radius-lg: 16px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: all 0.15s ease;
+
+  /* 毛玻璃效果变量 */
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-bg-hover: rgba(255, 255, 255, 0.12);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --glass-border-hover: rgba(255, 255, 255, 0.25);
+  --glass-blur: blur(20px);
+  --glass-blur-strong: blur(30px);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --glass-shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
