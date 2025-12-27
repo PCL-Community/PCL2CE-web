@@ -93,10 +93,8 @@ const { t } = useI18n();
 .about-view {
   width: 100%;
 }
-
-/* 关于英雄区域 */
 .about-hero {
-  min-height: 100vh;
+  min-height: calc(100vh - 12rem);
   display: flex;
   align-items: center;
   background: var(--gradient-hero);

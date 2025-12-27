@@ -138,6 +138,8 @@ export default {
     issues: '问题反馈',
     discussions: '讨论区',
     copyright: '版权所有',
+    websiteRepo: '此网页开源于github',
     disclaimer: '"Minecraft" 以及 "我的世界" 为美国微软公司的商标。PCL社区版和本网站与美国微软公司之间没有从属关系。',
+    icpRecord: '京ICP备2025138063号',
   },
 };

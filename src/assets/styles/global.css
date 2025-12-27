@@ -305,6 +305,64 @@ a {
   transform: translateY(0);
 }
 
+/* 淡入动画 */
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
+}
+
+.fade-in.is-visible {
+  opacity: 1;
+}
+
+/* 从左滑入 */
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slide-in-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* 从右滑入 */
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slide-in-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* 缩放动画 */
+.scale-in {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scale-in.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* 旋转进入动画 */
+.rotate-in {
+  opacity: 0;
+  transform: rotate(5deg) translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.rotate-in.is-visible {
+  opacity: 1;
+  transform: rotate(0) translateY(0);
+}
+
 /* 首屏内容不使用滚动动画 */
 .hero {
   opacity: 1 !important;

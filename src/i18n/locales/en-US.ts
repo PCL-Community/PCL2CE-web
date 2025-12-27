@@ -138,6 +138,8 @@ export default {
     issues: 'Issues',
     discussions: 'Discussions',
     copyright: 'All Rights Reserved',
+    websiteRepo: 'This website is open source on GitHub',
     disclaimer: '"Minecraft" and "我的世界" are trademarks of Microsoft Corporation. PCL Community Edition and this website are not affiliated with Microsoft Corporation.',
+    icpRecord: 'Jing ICP Registration Number 2025138063',
   },
 };

@@ -94,7 +94,7 @@ const { t } = useI18n();
 
 <style scoped>
 .download-view {
-  min-height: 100vh;
+  min-height: calc(100vh - 12rem);
   padding: 8rem 0 4rem;
   background: var(--gradient-dark);
 }

@@ -12,7 +12,7 @@
             {{ t('home.description') }}
           </p>
           <div class="hero-buttons">
-            <router-link to="/download" class="btn btn-primary btn-large">
+            <router-link to="/download" class="btn btn-primary btn-large btn-white">
               <svg
                 width="20"
                 height="20"
@@ -30,11 +30,11 @@
           </div>
           <div class="hero-stats">
             <div class="stat">
-              <span class="stat-number">10K+</span>
+              <span class="stat-number counter" data-target="10000" data-suffix="K+">0</span>
               <span class="stat-label">{{ t('home.stats.activeUsers') }}</span>
             </div>
             <div class="stat">
-              <span class="stat-number">100%</span>
+              <span class="stat-number counter" data-target="100" data-suffix="%">0</span>
               <span class="stat-label">{{ t('home.stats.openSource') }}</span>
             </div>
             <div class="stat">
@@ -53,7 +53,7 @@
     </section>
 
     <!-- 演示视频区域 -->
-    <section class="demo-section">
+    <section class="demo-section fade-in">
       <div class="container">
         <div class="section-header">
           <h2>{{ t('home.videoTitle') }}</h2>
@@ -78,7 +78,7 @@
           <p>{{ t('home.featuresDesc') }}</p>
         </div>
         <div class="features-grid">
-          <div class="feature-card">
+          <div class="feature-card slide-in-left" style="transition-delay: 0.1s;">
             <div class="feature-icon">
               <svg
                 width="48"
@@ -95,7 +95,7 @@
             <p>{{ t('home.features.crashAnalysis.desc') }}</p>
           </div>
 
-          <div class="feature-card">
+          <div class="feature-card slide-in-right" style="transition-delay: 0.2s;">
             <div class="feature-icon">
               <svg
                 width="48"
@@ -112,7 +112,7 @@
             <p>{{ t('home.features.folderManagement.desc') }}</p>
           </div>
 
-          <div class="feature-card">
+          <div class="feature-card scale-in" style="transition-delay: 0.3s;">
             <div class="feature-icon">
               <svg
                 width="48"
@@ -131,7 +131,7 @@
             <p>{{ t('home.features.resourceDownload.desc') }}</p>
           </div>
 
-          <div class="feature-card">
+          <div class="feature-card slide-in-left" style="transition-delay: 0.4s;">
             <div class="feature-icon">
               <svg
                 width="48"
@@ -149,7 +149,7 @@
             <p>{{ t('home.features.multiAccount.desc') }}</p>
           </div>
 
-          <div class="feature-card">
+          <div class="feature-card slide-in-right" style="transition-delay: 0.5s;">
             <div class="feature-icon">
               <svg
                 width="48"
@@ -168,7 +168,7 @@
             <p>{{ t('home.features.javaManagement.desc') }}</p>
           </div>
 
-          <div class="feature-card">
+          <div class="feature-card scale-in" style="transition-delay: 0.6s;">
             <div class="feature-icon">
               <svg
                 width="48"
@@ -199,10 +199,10 @@
         </div>
 
         <div class="screenshot-row scroll-animate">
-          <div class="screenshot-image">
+          <div class="screenshot-image slide-in-left">
             <img src="/img/x1.png" alt="Main Interface" loading="lazy" />
           </div>
-          <div class="screenshot-content">
+          <div class="screenshot-content slide-in-right">
             <h3>{{ t('home.screenshots.main.title') }}</h3>
             <p>{{ t('home.screenshots.main.desc') }}</p>
             <ul class="feature-highlights">
@@ -213,7 +213,7 @@
         </div>
 
         <div class="screenshot-row reverse scroll-animate">
-          <div class="screenshot-content">
+          <div class="screenshot-content slide-in-left">
             <h3>{{ t('home.screenshots.version.title') }}</h3>
             <p>{{ t('home.screenshots.version.desc') }}</p>
             <ul class="feature-highlights">
@@ -222,16 +222,16 @@
               <li>{{ t('home.screenshots.version.features.2') }}</li>
             </ul>
           </div>
-          <div class="screenshot-image">
+          <div class="screenshot-image slide-in-right">
             <img src="/img/x2.png" alt="Version Management" loading="lazy" />
           </div>
         </div>
 
         <div class="screenshot-row scroll-animate">
-          <div class="screenshot-image">
+          <div class="screenshot-image slide-in-left">
             <img src="/img/x3.png" alt="Mod Management" loading="lazy" />
           </div>
-          <div class="screenshot-content">
+          <div class="screenshot-content slide-in-right">
             <h3>{{ t('home.screenshots.mod.title') }}</h3>
             <p>{{ t('home.screenshots.mod.desc') }}</p>
             <ul class="feature-highlights">
@@ -245,14 +245,14 @@
     </section>
 
     <!-- 下载区域 -->
-    <section class="download-section">
-      <div class="container">
-        <div class="download-content">
-          <div class="download-text">
+    <section class="download-section scroll-animate">
+        <div class="container">
+          <div class="download-content">
+            <div class="download-text slide-in-left">
             <h2>{{ t('home.downloadSection.title') }}</h2>
             <p>{{ t('home.downloadSection.desc') }}</p>
             <div class="download-buttons">
-              <router-link to="/download" class="btn btn-primary btn-large">
+              <router-link to="/download" class="btn btn-primary btn-large btn-white">
                 <svg
                   width="24"
                   height="24"
@@ -269,8 +269,8 @@
               </router-link>
             </div>
           </div>
-          <div class="download-visual">
-            <div class="download-card">
+            <div class="download-visual scale-in">
+              <div class="download-card">
               <div class="card-header">
                 <div class="card-title">
                   <h3>{{ t('home.downloadSection.cardTitle') }}</h3>
@@ -291,8 +291,8 @@
 </template>
 
 <script setup lang="ts">
-import { useScrollAnimation } from '@/composables/useScrollAnimation';
 import { useI18n } from 'vue-i18n';
+import { useScrollAnimation } from '@/composables/useScrollAnimation';
 
 const { t } = useI18n();
 
@@ -681,17 +681,20 @@ const resetTransform = (event: MouseEvent) => {
   color: var(--white);
   margin-bottom: 1rem;
   font-size: 3rem;
+  text-align: center;
 }
 
 .download-text p {
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 2rem;
   font-size: 1.2rem;
+  text-align: center;
 }
 
 .download-buttons {
   display: flex;
   gap: 1rem;
+  justify-content: center;
 }
 
 .download-card {
@@ -741,6 +744,18 @@ const resetTransform = (event: MouseEvent) => {
   font-size: 0.9rem;
 }
 
+.btn-white {
+  background: var(--white) !important;
+  color: var(--primary) !important;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-white:hover {
+  background: rgba(255, 255, 255, 0.9) !important;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
+}
+
 /* 响应式设计 */
 @media (max-width: 1024px) {
   .features-grid {
@@ -749,6 +764,10 @@ const resetTransform = (event: MouseEvent) => {
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding-top: 120px;
+  }
+  
   .hero-content {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -773,6 +792,15 @@ const resetTransform = (event: MouseEvent) => {
 
   .screenshot-row.reverse {
     flex-direction: column;
+  }
+  
+  /* 移动端统一文字在上图片在下 */
+  .screenshot-row .screenshot-content {
+    order: 1;
+  }
+  
+  .screenshot-row .screenshot-image {
+    order: 2;
   }
 }
 </style>
