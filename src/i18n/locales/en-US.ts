@@ -5,6 +5,14 @@ export default {
     download: 'Download',
     about: 'About',
   },
+  meta: {
+    titles: {
+      home: 'PCL Community Edition | Open Source Minecraft Launcher - Home',
+      about: 'PCL Community Edition | Open Source Minecraft Launcher - About',
+      download: 'PCL Community Edition | Open Source Minecraft Launcher - Download',
+      notFound: 'PCL Community Edition | Open Source Minecraft Launcher - Page Not Found',
+    },
+  },
   home: {
     title: 'PCL Community Edition',
     subtitle: 'Open Source & Free Minecraft Launcher',

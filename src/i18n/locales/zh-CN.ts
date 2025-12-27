@@ -5,6 +5,14 @@ export default {
     download: '下载',
     about: '关于',
   },
+  meta: {
+    titles: {
+      home: 'PCL 社区版 | 开源免费的Minecraft启动器 - 首页',
+      about: 'PCL 社区版 | 开源免费的Minecraft启动器 - 关于',
+      download: 'PCL 社区版 | 开源免费的Minecraft启动器 - 下载',
+      notFound: 'PCL 社区版 | 开源免费的Minecraft启动器 - 页面未找到',
+    },
+  },
   home: {
     title: 'PCL 社区版',
     subtitle: '开源免费的 Minecraft 启动器',

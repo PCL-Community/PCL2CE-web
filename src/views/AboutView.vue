@@ -5,7 +5,7 @@
         <div class="about-content">
           <div class="about-text">
             <div class="section-header">
-              <h2>{{ t('about.title') }}</h2>
+              <h1>{{ t('about.title') }}</h1>
               <p>{{ t('about.desc') }}</p>
             </div>
             <div class="about-links">

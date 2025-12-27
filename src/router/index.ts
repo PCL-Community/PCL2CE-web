@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router';
+import i18n from '../i18n';
 
 const routes: RouteRecordRaw[] = [
   {
@@ -6,7 +7,7 @@ const routes: RouteRecordRaw[] = [
     name: 'Home',
     component: () => import('@/views/HomeView.vue'),
     meta: {
-      title: 'PCL社区版 - 首页',
+      titleKey: 'meta.titles.home',
     },
   },
   {
@@ -14,7 +15,7 @@ const routes: RouteRecordRaw[] = [
     name: 'About',
     component: () => import('@/views/AboutView.vue'),
     meta: {
-      title: 'PCL社区版 - 关于',
+      titleKey: 'meta.titles.about',
     },
   },
   {
@@ -22,7 +23,7 @@ const routes: RouteRecordRaw[] = [
     name: 'Download',
     component: () => import('@/views/DownloadView.vue'),
     meta: {
-      title: 'PCL社区版 - 下载',
+      titleKey: 'meta.titles.download',
     },
   },
   {
@@ -30,7 +31,7 @@ const routes: RouteRecordRaw[] = [
     name: 'NotFound',
     component: () => import('@/views/NotFoundView.vue'),
     meta: {
-      title: 'PCL社区版 - 页面未找到',
+      titleKey: 'meta.titles.notFound',
     },
   },
 ];
@@ -53,11 +54,13 @@ const router = createRouter({
 });
 
 // 路由守卫 - 更新页面标题
+
+// 设置页面标题的路由守卫
 router.beforeEach((to, _from, next) => {
-  if (to.meta.title) {
-    document.title = to.meta.title as string;
+  if (to.meta.titleKey) {
+    document.title = i18n.global.t(to.meta.titleKey as string)
   }
-  next();
+  next()
 });
 
 // 路由错误处理

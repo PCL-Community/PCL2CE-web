@@ -159,7 +159,9 @@
 <script setup lang="ts">
 import { ref, computed, watch, onMounted, onUnmounted } from 'vue';
 import { useI18n } from 'vue-i18n';
+import { useRoute } from 'vue-router';
 import { useScrollAnimation } from './composables/useScrollAnimation';
+import i18n from './i18n';
 
 const { t, locale } = useI18n();
 const isMenuOpen = ref(false);
@@ -178,12 +180,27 @@ const toggleLangMenu = () => {
   isLangMenuOpen.value = !isLangMenuOpen.value;
 };
 
+const route = useRoute();
+
+const updatePageTitle = () => {
+  if (route.meta.titleKey) {
+    document.title = i18n.global.t(route.meta.titleKey as string);
+  }
+};
+
 const switchLanguage = (lang: string) => {
   locale.value = lang;
   localStorage.setItem('locale', lang);
   document.documentElement.lang = lang === 'zh-CN' ? 'zh-CN' : 'en';
   isLangMenuOpen.value = false;
+  // 语言切换后更新页面标题
+  updatePageTitle();
 };
+
+// 页面加载和路由变化时更新标题
+watch(() => route.path, () => {
+  updatePageTitle();
+}, { immediate: true });
 
 // 点击外部关闭语言菜单
 const handleClickOutside = (event: MouseEvent) => {

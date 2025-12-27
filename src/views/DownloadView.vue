@@ -4,7 +4,7 @@
       <div class="version-card">
         <div class="version-header">
           <div>
-            <div class="version-name">{{ t('download.title') }}</div>
+            <h1 class="version-name">{{ t('download.title') }}</h1>
             <span class="version-tag stable">{{ t('download.latestStable') }}</span>
           </div>
         </div>

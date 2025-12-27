@@ -4,10 +4,11 @@
     <section class="hero">
       <div class="hero-content">
         <div class="hero-text">
-          <h1 class="hero-title">
+          <h1 class="hero-title">{{ t('home.title') }} | {{ t('home.subtitle') }}</h1>
+          <div class="hero-subtitle">
             <span class="title-main">{{ t('home.title') }}</span>
             <span class="title-sub">{{ t('home.subtitle') }}</span>
-          </h1>
+          </div>
           <p class="hero-description">
             {{ t('home.description') }}
           </p>
@@ -372,6 +373,18 @@ const resetTransform = (event: MouseEvent) => {
 }
 
 .hero-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.hero-subtitle {
   margin-bottom: 2rem;
 }
 
