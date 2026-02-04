@@ -108,7 +108,7 @@ export default {
       },
     },
     mirrors: {
-      github: 'GitHub（境内下载可能较慢）',
+      github: 'GitHub（国内下载可能较慢）',
       mirror1: '线路1',
       mirror4: '线路4',
     },
