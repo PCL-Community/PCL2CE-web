@@ -100,7 +100,7 @@ export default {
     mirrorchyan: {
       title: 'MirrorChyan High-Speed Download',
       desc: 'If you have a MirrorChyan CDK, you can use this high-speed download source directly',
-      link: 'https://mirrorchyan.com/zh/projects?rid=PCL2-CE&source=pcl2ce-gh-release',
+      link: 'https://mirrorchyan.com/en/projects?rid=PCL2-CE&source=pcl2ce-gh-release',
       buttonText: 'MirrorChyan Download',
       note: 'You can also download directly from the links below',
     },
