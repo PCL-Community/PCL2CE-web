@@ -214,8 +214,7 @@ const { t } = useI18n();
 
 .about-image:hover {
   border-color: var(--glass-border-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
 }
 
 .about-image img {
