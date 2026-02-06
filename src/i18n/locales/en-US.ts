@@ -97,6 +97,13 @@ export default {
       text: 'By clicking any download button below and running the program, you agree to our privacy policy. Please click the link below to view the privacy policy',
       link: 'https://www.pclc.cc/privacy/',
     },
+    mirrorchyan: {
+      title: 'MirrorChyan High-Speed Download',
+      desc: 'If you have a MirrorChyan CDK, you can use this high-speed download source directly',
+      link: 'https://mirrorchyan.com/en/projects?rid=PCL2-CE&source=pcl2ce-gh-release',
+      buttonText: 'MirrorChyan Download',
+      note: 'You can also download directly from the links below',
+    },
     versions: {
       x64: {
         title: 'X64 Version',

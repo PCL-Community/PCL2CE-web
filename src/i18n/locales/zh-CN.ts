@@ -97,6 +97,13 @@ export default {
       text: '如果您点击下方任意下载并运行程序，代表同意我们的隐私协议，隐私协议请点击下方链接查看',
       link: 'https://www.pclc.cc/privacy/',
     },
+    mirrorchyan: {
+      title: 'Mirror 酱高速下载',
+      desc: '如果你有 Mirror 酱 CDK 可以直接使用此高速下载源',
+      link: 'https://mirrorchyan.com/zh/projects?rid=PCL2-CE&source=pcl2ce-gh-release',
+      buttonText: 'Mirror 酱下载',
+      note: '你也可以直接在下方的链接中下载',
+    },
     versions: {
       x64: {
         title: 'X64 版本',

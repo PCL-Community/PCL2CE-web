@@ -25,6 +25,15 @@
           <a :href="t('download.privacyNotice.link')" target="_blank">{{ t('download.privacyNotice.link') }}</a>
         </div>
 
+        <div class="mirrorchyan-section">
+          <h3>{{ t('download.mirrorchyan.title') }}</h3>
+          <p>{{ t('download.mirrorchyan.desc') }}</p>
+          <a :href="t('download.mirrorchyan.link')" target="_blank" class="mirror-btn primary">
+            {{ t('download.mirrorchyan.buttonText') }}
+          </a>
+          <p class="mirrorchyan-note">{{ t('download.mirrorchyan.note') }}</p>
+        </div>
+
         <div class="download-grid">
           <div class="download-option">
             <h3>{{ t('download.versions.x64.title') }}</h3>
@@ -205,6 +214,52 @@ const { t } = useI18n();
   color: var(--white);
 }
 
+.mirrorchyan-section {
+  margin: 2rem 0;
+  padding: 2rem;
+  background: rgba(52, 152, 219, 0.1);
+  border: 1px solid rgba(52, 152, 219, 0.3);
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+.mirrorchyan-section h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.mirrorchyan-section p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.mirrorchyan-section .mirror-btn.primary {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: var(--gradient-primary);
+  color: var(--white);
+  text-align: center;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: var(--transition);
+  box-shadow: var(--shadow-md);
+}
+
+.mirrorchyan-section .mirror-btn.primary:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.mirrorchyan-note {
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
 .download-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -223,7 +278,6 @@ const { t } = useI18n();
 .download-option:hover {
   background: rgba(255, 255, 255, 0.08);
   border-color: var(--glass-border-hover);
-  transform: translateY(-2px);
   box-shadow: var(--glass-shadow);
 }
 
@@ -260,7 +314,6 @@ const { t } = useI18n();
 }
 
 .mirror-btn:hover {
-  transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
 }
 
