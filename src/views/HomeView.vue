@@ -31,11 +31,11 @@
           </div>
           <div class="hero-stats">
             <div class="stat">
-              <span class="stat-number counter" data-target="10000" data-suffix="K+">0</span>
+              <span class="stat-number">10K+</span>
               <span class="stat-label">{{ t('home.stats.activeUsers') }}</span>
             </div>
             <div class="stat">
-              <span class="stat-number counter" data-target="100" data-suffix="%">0</span>
+              <span class="stat-number">100%</span>
               <span class="stat-label">{{ t('home.stats.openSource') }}</span>
             </div>
             <div class="stat">
@@ -54,7 +54,7 @@
     </section>
 
     <!-- 演示视频区域 -->
-    <section class="demo-section fade-in">
+    <section class="demo-section">
       <div class="container">
         <div class="section-header">
           <h2>{{ t('home.videoTitle') }}</h2>
@@ -72,14 +72,14 @@
     </section>
 
     <!-- 功能特性区域 -->
-    <section class="features-section scroll-animate" id="features">
+    <section class="features-section" id="features">
       <div class="container">
         <div class="section-header">
           <h2>{{ t('home.featuresTitle') }}</h2>
           <p>{{ t('home.featuresDesc') }}</p>
         </div>
         <div class="features-grid">
-          <div class="feature-card slide-in-left" style="transition-delay: 0.1s;">
+          <div class="feature-card">
             <div class="feature-icon">
               <svg
                 width="48"
@@ -96,7 +96,7 @@
             <p>{{ t('home.features.crashAnalysis.desc') }}</p>
           </div>
 
-          <div class="feature-card slide-in-right" style="transition-delay: 0.2s;">
+          <div class="feature-card">
             <div class="feature-icon">
               <svg
                 width="48"
@@ -113,7 +113,7 @@
             <p>{{ t('home.features.folderManagement.desc') }}</p>
           </div>
 
-          <div class="feature-card scale-in" style="transition-delay: 0.3s;">
+          <div class="feature-card">
             <div class="feature-icon">
               <svg
                 width="48"
@@ -132,7 +132,7 @@
             <p>{{ t('home.features.resourceDownload.desc') }}</p>
           </div>
 
-          <div class="feature-card slide-in-left" style="transition-delay: 0.4s;">
+          <div class="feature-card">
             <div class="feature-icon">
               <svg
                 width="48"
@@ -150,7 +150,7 @@
             <p>{{ t('home.features.multiAccount.desc') }}</p>
           </div>
 
-          <div class="feature-card slide-in-right" style="transition-delay: 0.5s;">
+          <div class="feature-card">
             <div class="feature-icon">
               <svg
                 width="48"
@@ -169,7 +169,7 @@
             <p>{{ t('home.features.javaManagement.desc') }}</p>
           </div>
 
-          <div class="feature-card scale-in" style="transition-delay: 0.6s;">
+          <div class="feature-card">
             <div class="feature-icon">
               <svg
                 width="48"
@@ -199,11 +199,11 @@
           <p>{{ t('home.screenshotsDesc') }}</p>
         </div>
 
-        <div class="screenshot-row scroll-animate">
-          <div class="screenshot-image slide-in-left">
+        <div class="screenshot-row">
+          <div class="screenshot-image">
             <img src="/img/x1.png" alt="Main Interface" loading="lazy" />
           </div>
-          <div class="screenshot-content slide-in-right">
+          <div class="screenshot-content">
             <h3>{{ t('home.screenshots.main.title') }}</h3>
             <p>{{ t('home.screenshots.main.desc') }}</p>
             <ul class="feature-highlights">
@@ -213,8 +213,8 @@
           </div>
         </div>
 
-        <div class="screenshot-row reverse scroll-animate">
-          <div class="screenshot-content slide-in-left">
+        <div class="screenshot-row reverse">
+          <div class="screenshot-content">
             <h3>{{ t('home.screenshots.version.title') }}</h3>
             <p>{{ t('home.screenshots.version.desc') }}</p>
             <ul class="feature-highlights">
@@ -223,16 +223,16 @@
               <li>{{ t('home.screenshots.version.features.2') }}</li>
             </ul>
           </div>
-          <div class="screenshot-image slide-in-right">
+          <div class="screenshot-image">
             <img src="/img/x2.png" alt="Version Management" loading="lazy" />
           </div>
         </div>
 
-        <div class="screenshot-row scroll-animate">
-          <div class="screenshot-image slide-in-left">
+        <div class="screenshot-row">
+          <div class="screenshot-image">
             <img src="/img/x3.png" alt="Mod Management" loading="lazy" />
           </div>
-          <div class="screenshot-content slide-in-right">
+          <div class="screenshot-content">
             <h3>{{ t('home.screenshots.mod.title') }}</h3>
             <p>{{ t('home.screenshots.mod.desc') }}</p>
             <ul class="feature-highlights">
@@ -246,10 +246,10 @@
     </section>
 
     <!-- 下载区域 -->
-    <section class="download-section scroll-animate">
-        <div class="container">
-          <div class="download-content">
-            <div class="download-text slide-in-left">
+    <section class="download-section">
+      <div class="container">
+        <div class="download-content">
+          <div class="download-text">
             <h2>{{ t('home.downloadSection.title') }}</h2>
             <p>{{ t('home.downloadSection.desc') }}</p>
             <div class="download-buttons">
@@ -270,8 +270,8 @@
               </router-link>
             </div>
           </div>
-            <div class="download-visual scale-in">
-              <div class="download-card">
+          <div class="download-visual">
+            <div class="download-card">
               <div class="card-header">
                 <div class="card-title">
                   <h3>{{ t('home.downloadSection.cardTitle') }}</h3>
@@ -293,12 +293,8 @@
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
-import { useScrollAnimation } from '@/composables/useScrollAnimation';
 
 const { t } = useI18n();
-
-// 初始化滚动动画
-useScrollAnimation();
 
 const handleMouseMove = (event: MouseEvent) => {
   const container = event.currentTarget as HTMLElement;
@@ -524,10 +520,10 @@ const resetTransform = (event: MouseEvent) => {
   border: 1px solid var(--glass-border);
   border-radius: var(--border-radius-lg);
   padding: 2rem;
-  transition: var(--transition);
   position: relative;
   overflow: hidden;
   box-shadow: var(--glass-shadow);
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .feature-card::before {
@@ -540,18 +536,11 @@ const resetTransform = (event: MouseEvent) => {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.08) 100%);
   pointer-events: none;
   opacity: 0;
-  transition: var(--transition);
 }
 
 .feature-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--glass-shadow-hover);
-  border-color: var(--glass-border-hover);
   background: var(--glass-bg-hover);
-}
-
-.feature-card:hover::before {
-  opacity: 1;
+  border-color: var(--glass-border-hover);
 }
 
 .feature-icon {
@@ -567,12 +556,9 @@ const resetTransform = (event: MouseEvent) => {
   border: 2px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
   backdrop-filter: var(--glass-blur);
-  transition: var(--transition);
 }
 
 .feature-card:hover .feature-icon {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: var(--glass-shadow-hover);
   border-color: var(--glass-border-hover);
 }
 
