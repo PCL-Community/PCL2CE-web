@@ -7,10 +7,16 @@ export default {
   },
   meta: {
     titles: {
-      home: 'PCL Community Edition | Open Source Minecraft Launcher - Home',
-      about: 'PCL Community Edition | Open Source Minecraft Launcher - About',
-      download: 'PCL Community Edition | Open Source Minecraft Launcher - Download',
-      notFound: 'PCL Community Edition | Open Source Minecraft Launcher - Page Not Found',
+      home: 'PCL Community Edition Official Site | Open Source Minecraft Launcher with Smart Crash Analysis',
+      about: 'About PCL Community Edition | Community-driven Open Source Minecraft Launcher Project',
+      download: 'Download PCL Community Edition Latest Release | Free Minecraft Launcher for Windows X64/ARM64',
+      notFound: 'Page Not Found - PCL Community Edition | Open Source Minecraft Launcher',
+    },
+    descriptions: {
+      home: 'PCL Community Edition is a free and open source Minecraft launcher based on PCL2, featuring smart crash analysis, multi-instance folder management, one-click resource downloads, and multi-account support for a smoother gameplay setup.',
+      about: 'Learn about PCL Community Edition and PCL Community, a non-official yet community-driven open source initiative that maintains launcher tooling, collects player feedback, and continuously improves the Minecraft launcher experience.',
+      download: 'Download the latest stable version of PCL Community Edition for Windows X64 and ARM64, with multiple mirror options and historical releases available to help you start Minecraft quickly and reliably.',
+      notFound: 'The page you are looking for does not exist or has been moved. Return to the PCL Community Edition homepage to explore features, downloads, and community links.',
     },
   },
   home: {

@@ -7,10 +7,16 @@ export default {
   },
   meta: {
     titles: {
-      home: 'PCL 社区版 | 开源免费的Minecraft启动器 - 首页',
-      about: 'PCL 社区版 | 开源免费的Minecraft启动器 - 关于',
-      download: 'PCL 社区版 | 开源免费的Minecraft启动器 - 下载',
-      notFound: 'PCL 社区版 | 开源免费的Minecraft启动器 - 页面未找到',
+      home: 'PCL 社区版官网 | 开源免费的 Minecraft 启动器，支持崩溃分析与多版本管理',
+      about: '关于 PCL 社区版 | 社区驱动的开源 Minecraft 启动器项目与组织介绍',
+      download: '下载 PCL 社区版最新版 | Windows X64 / ARM64 开源免费 Minecraft 启动器',
+      notFound: '页面未找到 - PCL 社区版官网 | 开源免费的 Minecraft 启动器',
+    },
+    descriptions: {
+      home: 'PCL 社区版是基于 PCL2 构建的开源免费 Minecraft 启动器，提供智能崩溃分析、多文件夹实例管理、资源一键下载与多账号支持，帮助玩家更稳定、更高效地管理游戏。',
+      about: '了解 PCL 社区版与 PCL Community：这是一个由玩家共建的非官方开源社区项目，持续维护启动器生态、收集反馈并推动功能改进。',
+      download: '在此下载 PCL 社区版最新稳定版本，支持 Windows X64 与 ARM64 架构，并提供多个镜像线路与历史版本入口，快速开始你的 Minecraft 游戏体验。',
+      notFound: '你访问的页面不存在或已被移动。可以返回 PCL 社区版首页继续浏览功能介绍、下载页面和社区链接。',
     },
   },
   home: {
