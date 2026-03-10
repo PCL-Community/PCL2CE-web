@@ -8,6 +8,7 @@ const routes: RouteRecordRaw[] = [
     component: () => import('@/views/HomeView.vue'),
     meta: {
       titleKey: 'meta.titles.home',
+      descriptionKey: 'meta.descriptions.home',
     },
   },
   {
@@ -16,6 +17,7 @@ const routes: RouteRecordRaw[] = [
     component: () => import('@/views/AboutView.vue'),
     meta: {
       titleKey: 'meta.titles.about',
+      descriptionKey: 'meta.descriptions.about',
     },
   },
   {
@@ -24,6 +26,7 @@ const routes: RouteRecordRaw[] = [
     component: () => import('@/views/DownloadView.vue'),
     meta: {
       titleKey: 'meta.titles.download',
+      descriptionKey: 'meta.descriptions.download',
     },
   },
   {
@@ -32,6 +35,7 @@ const routes: RouteRecordRaw[] = [
     component: () => import('@/views/NotFoundView.vue'),
     meta: {
       titleKey: 'meta.titles.notFound',
+      descriptionKey: 'meta.descriptions.notFound',
     },
   },
 ];
@@ -55,12 +59,27 @@ const router = createRouter({
 
 // 路由守卫 - 更新页面标题
 
+const updateMetaDescription = (content: string) => {
+  let metaDescription = document.querySelector('meta[name="description"]');
+  if (!metaDescription) {
+    metaDescription = document.createElement('meta');
+    metaDescription.setAttribute('name', 'description');
+    document.head.appendChild(metaDescription);
+  }
+  metaDescription.setAttribute('content', content);
+};
+
 // 设置页面标题的路由守卫
 router.beforeEach((to, _from, next) => {
   if (to.meta.titleKey) {
-    document.title = i18n.global.t(to.meta.titleKey as string)
+    document.title = i18n.global.t(to.meta.titleKey as string);
   }
-  next()
+
+  if (to.meta.descriptionKey) {
+    updateMetaDescription(i18n.global.t(to.meta.descriptionKey as string));
+  }
+
+  next();
 });
 
 // 路由错误处理

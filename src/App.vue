@@ -181,9 +181,20 @@ const toggleLangMenu = () => {
 
 const route = useRoute();
 
-const updatePageTitle = () => {
+const updatePageSeo = () => {
   if (route.meta.titleKey) {
     document.title = i18n.global.t(route.meta.titleKey as string);
+  }
+
+  if (route.meta.descriptionKey) {
+    const description = i18n.global.t(route.meta.descriptionKey as string);
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta');
+      metaDescription.setAttribute('name', 'description');
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.setAttribute('content', description);
   }
 };
 
@@ -192,13 +203,13 @@ const switchLanguage = (lang: string) => {
   localStorage.setItem('locale', lang);
   document.documentElement.lang = lang === 'zh-CN' ? 'zh-CN' : 'en';
   isLangMenuOpen.value = false;
-  // 语言切换后更新页面标题
-  updatePageTitle();
+  // 语言切换后更新页面 SEO 信息
+  updatePageSeo();
 };
 
-// 页面加载和路由变化时更新标题
+// 页面加载和路由变化时更新 SEO 信息
 watch(() => route.path, () => {
-  updatePageTitle();
+  updatePageSeo();
 }, { immediate: true });
 
 // 点击外部关闭语言菜单
