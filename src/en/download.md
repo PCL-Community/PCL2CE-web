@@ -42,21 +42,25 @@ You can also download directly from the links below
 
 For most Windows PCs
 
-<div class="mirror-grid">
-  <a href="https://github.com/PCL-Community/PCL2-CE/releases/latest/download/PCL2_CE_Release_x64.exe" class="mirror-btn">GitHub</a>
-  <a href="https://download.fishcpy.top/dl/pclce/pcl2ce/PCL2_CE_Release_x64.exe" class="mirror-btn">Mirror 1</a>
-  <a href="https://scdn.星.fun/PCL2_CE_Release_x64.exe" class="mirror-btn">Mirror 4</a>
-</div>
+<MirrorGrid
+  :items="[
+    { href: 'https://github.com/PCL-Community/PCL2-CE/releases/latest/download/PCL2_CE_Release_x64.exe', label: 'GitHub' },
+    { href: 'https://download.fishcpy.top/dl/pclce/pcl2ce/PCL2_CE_Release_x64.exe', label: 'Mirror 1' },
+    { href: 'https://scdn.星.fun/PCL2_CE_Release_x64.exe', label: 'Mirror 4' }
+  ]"
+/>
 
 ### ARM64 Version
 
 For ARM-based Windows PCs
 
-<div class="mirror-grid">
-  <a href="https://github.com/PCL-Community/PCL2-CE/releases/latest/download/PCL2_CE_Release_ARM64.exe" class="mirror-btn">GitHub</a>
-  <a href="https://download.fishcpy.top/dl/pclce/pcl2ce/PCL2_CE_Release_ARM64.exe" class="mirror-btn">Mirror 1</a>
-  <a href="https://scdn.星.fun/PCL2_CE_Release_ARM64.exe" class="mirror-btn">Mirror 4</a>
-</div>
+<MirrorGrid
+  :items="[
+    { href: 'https://github.com/PCL-Community/PCL2-CE/releases/latest/download/PCL2_CE_Release_ARM64.exe', label: 'GitHub' },
+    { href: 'https://download.fishcpy.top/dl/pclce/pcl2ce/PCL2_CE_Release_ARM64.exe', label: 'Mirror 1' },
+    { href: 'https://scdn.星.fun/PCL2_CE_Release_ARM64.exe', label: 'Mirror 4' }
+  ]"
+/>
 
 ---
 

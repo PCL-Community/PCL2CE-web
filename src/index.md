@@ -40,57 +40,25 @@ features:
     details: 完全开源的项目，永久免费使用，社区驱动开发，持续更新和改进。
 ---
 
-<div class="video-section">
-  <h2>PCL 社区版演示视频</h2>
-  <p>观看视频了解 PCL 社区版的强大功能</p>
-  <div class="video-container">
-    <iframe
-      src="https://player.bilibili.com/player.html?aid=113865304048458&bvid=BV1w5wheQEAy&cid=28195815657&p=1&autoplay=0&high_quality=1&danmaku=0"
-      frameborder="0"
-      allow="autoplay; fullscreen"
-      allowfullscreen
-    ></iframe>
-  </div>
-</div>
+<VideoSection
+  title="PCL 社区版演示视频"
+  description="观看视频了解 PCL 社区版的强大功能"
+  videoSrc="https://player.bilibili.com/player.html?aid=113865304048458&bvid=BV1w5wheQEAy&cid=28195815657&p=1&autoplay=0&high_quality=1&danmaku=0"
+/>
 
-<div class="screenshots-section">
-  <h2>界面预览</h2>
-  <p>直观了解 PCL 社区版的界面设计和功能布局</p>
-  
-  <div class="screenshot-grid">
-    <div class="screenshot-item">
-      <img src="/img/x1.png" alt="主界面" loading="lazy" />
-      <div class="overlay">
-        <h3>主界面</h3>
-        <p>简洁直观的主界面设计，所有功能一目了然。支持深色主题切换。</p>
-      </div>
-    </div>
-    <div class="screenshot-item">
-      <img src="/img/x2.png" alt="版本管理" loading="lazy" />
-      <div class="overlay">
-        <h3>版本管理</h3>
-        <p>强大的版本管理功能，支持多个 Minecraft 版本同时管理。</p>
-      </div>
-    </div>
-    <div class="screenshot-item">
-      <img src="/img/x3.png" alt="模组管理" loading="lazy" />
-      <div class="overlay">
-        <h3>模组管理</h3>
-        <p>便捷的模组安装和管理系统，支持从多个来源下载模组。</p>
-      </div>
-    </div>
-  </div>
-</div>
+<ScreenshotsSection
+  title="界面预览"
+  description="直观了解 PCL 社区版的界面设计和功能布局"
+  :items="[
+    { src: '/img/x1.png', alt: '主界面', title: '主界面', description: '简洁直观的主界面设计，所有功能一目了然。支持深色主题切换。' },
+    { src: '/img/x2.png', alt: '版本管理', title: '版本管理', description: '强大的版本管理功能，支持多个 Minecraft 版本同时管理。' },
+    { src: '/img/x3.png', alt: '模组管理', title: '模组管理', description: '便捷的模组安装和管理系统，支持从多个来源下载模组。' }
+  ]"
+/>
 
-<div class="download-cta">
-  <h1>立即下载</h1>
-  <p>开始你的 Minecraft 之旅，体验最好用的启动器</p>
-  <a href="/download" class="download-btn">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-      <polyline points="7 10 12 15 17 10" />
-      <line x1="12" y1="15" x2="12" y2="3" />
-    </svg>
-    下载最新版
-  </a>
-</div>
+<DownloadCTA
+  title="立即下载"
+  description="开始你的 Minecraft 之旅，体验最好用的启动器"
+  buttonText="下载最新版"
+  buttonLink="/download"
+/>

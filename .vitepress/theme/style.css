@@ -565,3 +565,11 @@ a:focus-visible {
   margin-right: 0.25rem;
   vertical-align: -0.125em;
 }
+
+/* iconify-icon 居中修复 */
+iconify-icon {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  vertical-align: middle !important;
+}
