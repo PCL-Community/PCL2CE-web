@@ -28,8 +28,6 @@ keywords: PCL下载,Minecraft启动器下载,PCL社区版下载,启动器下载
 
 [https://www.pclc.cc/privacy/](https://www.pclc.cc/privacy/)
 
----
-
 ### Mirror 酱高速下载
 
 如果你有 Mirror 酱 CDK 可以直接使用此高速下载源
@@ -38,8 +36,6 @@ keywords: PCL下载,Minecraft启动器下载,PCL社区版下载,启动器下载
 
 你也可以直接在下方的链接中下载
 
----
-
 ## 下载链接
 
 ### X64 版本
@@ -47,7 +43,7 @@ keywords: PCL下载,Minecraft启动器下载,PCL社区版下载,启动器下载
 适用于大多数 Windows 电脑
 
 <div class="mirror-grid">
-  <a href="https://github.com/PCL-Community/PCL2-CE/releases/latest/download/PCL2_CE_Release_x64.exe" class="mirror-btn">GitHub（国内下载可能较慢）</a>
+  <a href="https://github.com/PCL-Community/PCL2-CE/releases/latest/download/PCL2_CE_Release_x64.exe" class="mirror-btn">GitHub</a>
   <a href="https://download.fishcpy.top/dl/pclce/pcl2ce/PCL2_CE_Release_x64.exe" class="mirror-btn">线路1</a>
   <a href="https://scdn.星.fun/PCL2_CE_Release_x64.exe" class="mirror-btn">线路4</a>
 </div>
@@ -57,7 +53,7 @@ keywords: PCL下载,Minecraft启动器下载,PCL社区版下载,启动器下载
 适用于 ARM 架构的 Windows 电脑
 
 <div class="mirror-grid">
-  <a href="https://github.com/PCL-Community/PCL2-CE/releases/latest/download/PCL2_CE_Release_ARM64.exe" class="mirror-btn">GitHub（国内下载可能较慢）</a>
+  <a href="https://github.com/PCL-Community/PCL2-CE/releases/latest/download/PCL2_CE_Release_ARM64.exe" class="mirror-btn">GitHub</a>
   <a href="https://download.fishcpy.top/dl/pclce/pcl2ce/PCL2_CE_Release_ARM64.exe" class="mirror-btn">线路1</a>
   <a href="https://scdn.星.fun/PCL2_CE_Release_ARM64.exe" class="mirror-btn">线路4</a>
 </div>

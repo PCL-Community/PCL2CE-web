@@ -28,8 +28,6 @@ By clicking any download button below and running the program, you agree to our 
 
 [https://www.pclc.cc/privacy/](https://www.pclc.cc/privacy/)
 
----
-
 ### MirrorChyan High-Speed Download
 
 If you have a MirrorChyan CDK, you can use this high-speed download source directly
@@ -38,8 +36,6 @@ If you have a MirrorChyan CDK, you can use this high-speed download source direc
 
 You can also download directly from the links below
 
----
-
 ## Download Links
 
 ### X64 Version
@@ -47,7 +43,7 @@ You can also download directly from the links below
 For most Windows PCs
 
 <div class="mirror-grid">
-  <a href="https://github.com/PCL-Community/PCL2-CE/releases/latest/download/PCL2_CE_Release_x64.exe" class="mirror-btn">GitHub (May be slow in China)</a>
+  <a href="https://github.com/PCL-Community/PCL2-CE/releases/latest/download/PCL2_CE_Release_x64.exe" class="mirror-btn">GitHub</a>
   <a href="https://download.fishcpy.top/dl/pclce/pcl2ce/PCL2_CE_Release_x64.exe" class="mirror-btn">Mirror 1</a>
   <a href="https://scdn.星.fun/PCL2_CE_Release_x64.exe" class="mirror-btn">Mirror 4</a>
 </div>
@@ -57,7 +53,7 @@ For most Windows PCs
 For ARM-based Windows PCs
 
 <div class="mirror-grid">
-  <a href="https://github.com/PCL-Community/PCL2-CE/releases/latest/download/PCL2_CE_Release_ARM64.exe" class="mirror-btn">GitHub (May be slow in China)</a>
+  <a href="https://github.com/PCL-Community/PCL2-CE/releases/latest/download/PCL2_CE_Release_ARM64.exe" class="mirror-btn">GitHub</a>
   <a href="https://download.fishcpy.top/dl/pclce/pcl2ce/PCL2_CE_Release_ARM64.exe" class="mirror-btn">Mirror 1</a>
   <a href="https://scdn.星.fun/PCL2_CE_Release_ARM64.exe" class="mirror-btn">Mirror 4</a>
 </div>
