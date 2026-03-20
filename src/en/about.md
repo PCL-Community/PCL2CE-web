@@ -2,6 +2,7 @@
 title: About PCL Community Edition | Community-driven Open Source Minecraft Launcher Project
 description: Learn about PCL Community Edition and PCL Community, a non-official yet community-driven open source initiative that maintains launcher tooling and collects player feedback
 keywords: PCL Community,PCL About,Open Source Community
+aside: false
 ---
 
 # PCL Community
@@ -17,7 +18,7 @@ Unofficial PCL community player organization, does not represent developer LongT
     </div>
     <div class="link-card-content">
       <h4>GitHub</h4>
-      <p>github.com/PCL-Community</p>
+      <p>PCL-Community</p>
     </div>
   </a>
 
@@ -29,7 +30,7 @@ Unofficial PCL community player organization, does not represent developer LongT
     </div>
     <div class="link-card-content">
       <h4>Bilibili</h4>
-      <p>space.bilibili.com/3546847192811755</p>
+      <p>PCL-Community</p>
     </div>
   </a>
 
@@ -44,7 +45,7 @@ Unofficial PCL community player organization, does not represent developer LongT
     </div>
     <div class="link-card-content">
       <h4>Join Organization</h4>
-      <p>github.com/orgs/PCL-Community/discussions/10</p>
+      <p>Discussions/10</p>
     </div>
   </a>
 </div>

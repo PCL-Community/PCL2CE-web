@@ -2,6 +2,7 @@
 title: 关于 PCL 社区版 | 社区驱动的开源 Minecraft 启动器项目
 description: 了解 PCL 社区版与 PCL Community：这是一个由玩家共建的非官方开源社区项目，持续维护启动器生态、收集反馈并推动功能改进
 keywords: PCL社区,PCL Community,关于PCL,开源社区
+aside: false
 ---
 
 # PCL Community
@@ -17,7 +18,7 @@ keywords: PCL社区,PCL Community,关于PCL,开源社区
     </div>
     <div class="link-card-content">
       <h4>GitHub</h4>
-      <p>github.com/PCL-Community</p>
+      <p>PCL-Community</p>
     </div>
   </a>
 
@@ -29,7 +30,7 @@ keywords: PCL社区,PCL Community,关于PCL,开源社区
     </div>
     <div class="link-card-content">
       <h4>B 站</h4>
-      <p>space.bilibili.com/3546847192811755</p>
+      <p>PCL-Community</p>
     </div>
   </a>
 
@@ -44,7 +45,7 @@ keywords: PCL社区,PCL Community,关于PCL,开源社区
     </div>
     <div class="link-card-content">
       <h4>加入组织</h4>
-      <p>github.com/orgs/PCL-Community/discussions/10</p>
+      <p>Discussions/10</p>
     </div>
   </a>
 </div>
