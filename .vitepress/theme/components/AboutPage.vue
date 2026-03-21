@@ -6,7 +6,7 @@ interface AboutCard {
   href?: string;
 }
 
-const _pnprops = defineProps<{
+const _props = defineProps<{
   cards: AboutCard[];
   imageSrc: string;
   imageAlt: string;
