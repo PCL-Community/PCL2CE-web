@@ -66,4 +66,4 @@ For ARM-based Windows PCs
 
 If you need an older version of PCL CE, you can download from the following link:
 
-[Historical Versions](https://github.com/PCL-Community/PCL2-CE/releases){.mirror-btn}
+[Historical Versions](/en/history){.mirror-btn}

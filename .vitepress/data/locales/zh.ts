@@ -8,6 +8,8 @@ export const zh: LocaleMessages = {
       '<iconify-icon class="i-mr" icon="mdi:download" style="color:#2ecc71"></iconify-icon>下载',
     about:
       '<iconify-icon class="i-mr" icon="mdi:information" style="color:#9b59b6"></iconify-icon>关于',
+    history:
+      '<iconify-icon class="i-mr" icon="mdi:history" style="color:#e67e22"></iconify-icon>历史版本',
   },
 
   // 主题配置
@@ -65,6 +67,21 @@ export const zh: LocaleMessages = {
     historicalDesc: '如果您需要旧版本的 PCL CE，可以从以下链接下载：',
     historicalBtn: '历史版本',
     alsoDownload: '你也可以直接在下方的链接中下载',
+  },
+
+  history: {
+    title: '历史版本下载',
+    subtitle: '选择版本查看更新日志并下载对应安装包。',
+    selectLabel: '选择版本',
+    loading: '正在获取版本列表…',
+    error: '获取失败，请稍后再试。',
+    retry: '重试',
+    empty: '暂无可用的历史版本。',
+    noAssets: '该版本暂无可用下载资源。',
+    noChangelog: '该版本没有更新日志描述。',
+    viewOnGithub: '在 GitHub 查看详情',
+    x64Label: '下载 X64',
+    arm64Label: '下载 ARM64',
   },
 
   // 关于页面

@@ -10,6 +10,7 @@ export interface LocaleMessages {
     home: string;
     download: string;
     about: string;
+    history: string;
   };
   theme: {
     prevPage: string;
@@ -61,6 +62,20 @@ export interface LocaleMessages {
     historicalBtn: string;
     alsoDownload: string;
   };
+  history: {
+    title: string;
+    subtitle: string;
+    selectLabel: string;
+    loading: string;
+    error: string;
+    retry: string;
+    empty: string;
+    noAssets: string;
+    noChangelog: string;
+    viewOnGithub: string;
+    x64Label: string;
+    arm64Label: string;
+  };
   about: {
     title: string;
     subtitle: string;
@@ -92,11 +107,13 @@ export const navTranslations: Record<
   'zh-CN': [
     { text: zh.nav.home, link: '/' },
     { text: zh.nav.download, link: '/download' },
+    { text: zh.nav.history, link: '/history' },
     { text: zh.nav.about, link: '/about' },
   ],
   en: [
     { text: en.nav.home, link: '/en/' },
     { text: en.nav.download, link: '/en/download' },
+    { text: en.nav.history, link: '/en/history' },
     { text: en.nav.about, link: '/en/about' },
   ],
 };
