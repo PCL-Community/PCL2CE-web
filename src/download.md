@@ -66,4 +66,4 @@ keywords: PCL下载,Minecraft启动器下载,PCL社区版下载,启动器下载
 
 如果您需要旧版本的 PCL CE，可以从以下链接下载：
 
-[历史版本](https://github.com/PCL-Community/PCL2-CE/releases){.mirror-btn}
+[历史版本](/history){.mirror-btn}

@@ -10,6 +10,7 @@ export interface LocaleMessages {
     home: string;
     download: string;
     about: string;
+    history: string;
   };
   theme: {
     prevPage: string;
@@ -61,6 +62,20 @@ export interface LocaleMessages {
     historicalBtn: string;
     alsoDownload: string;
   };
+  history: {
+    title: string;
+    subtitle: string;
+    selectLabel: string;
+    loading: string;
+    error: string;
+    retry: string;
+    empty: string;
+    noAssets: string;
+    noChangelog: string;
+    viewOnGithub: string;
+    x64Label: string;
+    arm64Label: string;
+  };
   about: {
     title: string;
     subtitle: string;
@@ -92,11 +107,13 @@ export const navTranslations: Record<
   'zh-CN': [
     { text: zh.nav.home, link: '/' },
     { text: zh.nav.download, link: '/download' },
+    { text: zh.nav.history, link: '/history' },
     { text: zh.nav.about, link: '/about' },
   ],
   en: [
     { text: en.nav.home, link: '/en/' },
     { text: en.nav.download, link: '/en/download' },
+    { text: en.nav.history, link: '/en/history' },
     { text: en.nav.about, link: '/en/about' },
   ],
 };
@@ -152,6 +169,7 @@ export const themeConfigTranslations: Record<Lang, object> = {
 // Footer 数据
 export const getFooterData = (lang: Lang): FooterData => {
   const msgs = getMessages(lang);
+  const beianNumber = msgs.footer.beian || zh.footer.beian;
 
   const footerData: Record<Lang, FooterData> = {
     'zh-CN': {
@@ -196,7 +214,7 @@ export const getFooterData = (lang: Lang): FooterData => {
       beian: {
         showIcon: true,
         icp: {
-          number: msgs.footer.beian,
+          number: beianNumber,
           link: 'https://beian.miit.gov.cn/',
           rel: 'nofollow',
         },
@@ -247,6 +265,14 @@ export const getFooterData = (lang: Lang): FooterData => {
           ],
         },
       ],
+      beian: {
+        showIcon: true,
+        icp: {
+          number: beianNumber,
+          link: 'https://beian.miit.gov.cn/',
+          rel: 'nofollow',
+        },
+      },
       author: {
         name: 'PCL Community',
         link: 'https://github.com/PCL-Community',

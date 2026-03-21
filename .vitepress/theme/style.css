@@ -127,18 +127,17 @@ a:focus-visible {
 
 /* Feature 卡片样式 */
 .VPFeature {
-  border: none;
+  border: 1px solid var(--vp-c-divider);
   box-shadow: 0 10px 30px 0 rgb(0 0 0 / 15%);
   background-color: transparent;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: border-color 0.2s;
 }
 
 .VPFeatures .items .item {
-  transition: transform 0.3s;
 }
 
-.VPFeatures .items .item:hover {
-  transform: translateY(-5px);
+.VPFeatures .items .item:hover .VPFeature {
+  border-color: var(--vp-c-brand-1);
 }
 
 /* 导航栏样式 */
@@ -181,10 +180,4 @@ a:focus-visible {
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.download-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(2, 102, 193, 0.3);
 }

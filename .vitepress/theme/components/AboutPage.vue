@@ -82,7 +82,6 @@ const _props = defineProps<{
 .about-card-link:hover {
   border-color: var(--vp-c-brand-1);
   box-shadow: 0 4px 16px rgba(2, 102, 193, 0.12);
-  transform: translateX(4px);
 }
 
 .about-card-icon {

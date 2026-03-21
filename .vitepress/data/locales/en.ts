@@ -8,6 +8,8 @@ export const en: LocaleMessages = {
       '<iconify-icon class="i-mr" icon="mdi:download" style="color:#2ecc71"></iconify-icon>Download',
     about:
       '<iconify-icon class="i-mr" icon="mdi:information" style="color:#9b59b6"></iconify-icon>About',
+    history:
+      '<iconify-icon class="i-mr" icon="mdi:history" style="color:#e67e22"></iconify-icon>History',
   },
 
   // Theme config
@@ -33,7 +35,7 @@ export const en: LocaleMessages = {
     community: 'Community',
     feedback: 'Issues',
     discussions: 'Discussions',
-    beian: '',
+    beian: '京ICP备2025138063号',
     copyright: 'MIT License.',
   },
 
@@ -64,6 +66,21 @@ export const en: LocaleMessages = {
     historicalDesc: 'Need an older version? Download here:',
     historicalBtn: 'Historical Versions',
     alsoDownload: 'Or download directly from:',
+  },
+
+  history: {
+    title: 'Historical Releases',
+    subtitle: 'Fetch historical releases and download links from GitHub.',
+    selectLabel: 'Select a release',
+    loading: 'Loading releases…',
+    error: 'Failed to load releases.',
+    retry: 'Retry',
+    empty: 'No historical releases found.',
+    noAssets: 'No downloadable assets for this release.',
+    noChangelog: 'No release notes available for this release.',
+    viewOnGithub: 'View on GitHub',
+    x64Label: 'Download X64',
+    arm64Label: 'Download ARM64',
   },
 
   // About page

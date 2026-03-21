@@ -39,14 +39,13 @@ defineProps<{
   text-align: center;
   text-decoration: none;
   color: var(--vp-c-text-1);
-  transition: transform 0.3s;
+  transition: color 0.2s, background 0.2s, border-color 0.2s;
 }
 
 .mirror-btn:hover {
   background: var(--vp-c-brand-soft);
   border-color: var(--vp-c-brand-1);
   color: var(--vp-c-brand-1);
-  transform: translateY(-5px);
 }
 
 @media (max-width: 768px) {
