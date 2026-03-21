@@ -68,7 +68,7 @@ onMounted(() => (currentYear.value = new Date().getFullYear().toString()));
               height="12"
               loading="eager"
             />
-            <img v-else class="image-inline" src="https://i.theojs.cn/logo/miit.webp" width="12" height="12" loading="eager" />
+            <img v-else class="image-inline" src="/img/miit.ico" width="12" height="12" loading="eager" />
           </template>
           <a
             :href="footer.beian.icp.link || 'https://beian.miit.gov.cn/'"
