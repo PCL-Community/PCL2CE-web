@@ -4,11 +4,12 @@ import { useData } from 'vitepress';
 import DefaultTheme from 'vitepress/theme';
 import { h } from 'vue';
 import '@theojs/lumen/style';
-import { BoxCube, Card, CopyText, Footer, Links, Pill } from '@theojs/lumen';
+import { BoxCube, Card, CopyText, Links, Pill } from '@theojs/lumen';
 import { getFooterData, getMessages, type Lang } from '../data/i18n';
 import './style.css';
 import AboutPage from './components/AboutPage.vue';
 import MirrorGrid from './components/MirrorGrid.vue';
+import SiteFooter from './components/SiteFooter.vue';
 import VideoSection from './components/VideoSection.vue';
 
 export default {
@@ -19,7 +20,7 @@ export default {
         const { lang } = useData();
         const currentLang = (lang.value || 'zh-CN') as Lang;
         const footerData = getFooterData(currentLang);
-        return h(Footer, { Footer_Data: footerData });
+        return h(SiteFooter, { Footer_Data: footerData });
       },
     });
   },

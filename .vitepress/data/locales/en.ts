@@ -33,7 +33,7 @@ export const en: LocaleMessages = {
     community: 'Community',
     feedback: 'Issues',
     discussions: 'Discussions',
-    beian: '',
+    beian: '京ICP备2025138063号',
     copyright: 'MIT License.',
   },
 
