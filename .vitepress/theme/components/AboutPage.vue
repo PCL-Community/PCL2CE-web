@@ -1,16 +1,16 @@
 <script setup lang="ts">
 interface AboutCard {
-  icon: string
-  title: string
-  description: string
-  href?: string
+  icon: string;
+  title: string;
+  description: string;
+  href?: string;
 }
 
-const props = defineProps<{
-  cards: AboutCard[]
-  imageSrc: string
-  imageAlt: string
-}>()
+const _pnprops = defineProps<{
+  cards: AboutCard[];
+  imageSrc: string;
+  imageAlt: string;
+}>();
 </script>
 
 <template>

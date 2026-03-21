@@ -1,4 +1,4 @@
-import type { LocaleMessages } from './index'
+import type { LocaleMessages } from './index';
 
 export const zh: LocaleMessages = {
   // 跳转链接
@@ -7,8 +7,10 @@ export const zh: LocaleMessages = {
   // 导航栏
   nav: {
     home: '<iconify-icon class="i-mr" icon="mdi:home" style="color:#3498db"></iconify-icon>首页',
-    download: '<iconify-icon class="i-mr" icon="mdi:download" style="color:#2ecc71"></iconify-icon>下载',
-    about: '<iconify-icon class="i-mr" icon="mdi:information" style="color:#9b59b6"></iconify-icon>关于',
+    download:
+      '<iconify-icon class="i-mr" icon="mdi:download" style="color:#2ecc71"></iconify-icon>下载',
+    about:
+      '<iconify-icon class="i-mr" icon="mdi:information" style="color:#9b59b6"></iconify-icon>关于',
   },
 
   // 主题配置
@@ -35,7 +37,7 @@ export const zh: LocaleMessages = {
     feedback: '问题反馈',
     discussions: '讨论区',
     beian: '京ICP备2025138063号',
-    copyright: 'All Rights Reserved.',
+    copyright: 'MIT License.',
   },
 
   // 下载页面
@@ -52,7 +54,8 @@ export const zh: LocaleMessages = {
     tipArm64: '**ARM64** 主要用于微软 Surface Pro X 等设备',
     tipUnsure: '若不确定，优先选 **X64**（兼容性更广），若不可用再选 ARM64',
     privacyTitle: '隐私协议提示',
-    privacyDesc: '如果您点击下方任意下载并运行程序，代表同意我们的隐私协议，隐私协议请点击下方链接查看：',
+    privacyDesc:
+      '如果您点击下方任意下载并运行程序，代表同意我们的隐私协议，隐私协议请点击下方链接查看：',
     mirrorChyanTitle: 'Mirror 酱高速下载',
     mirrorChyanDesc: '如果你有 Mirror 酱 CDK 可以直接使用此高速下载源',
     mirrorChyanBtn: 'Mirror 酱下载',
@@ -78,4 +81,4 @@ export const zh: LocaleMessages = {
     joinTitle: '加入组织',
     joinDesc: '参与社区讨论，共同建设 PCL 生态',
   },
-}
+};

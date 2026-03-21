@@ -6,12 +6,16 @@
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
-    "preview": "vitepress preview"
+    "preview": "vitepress preview",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --write .",
+    "format": "biome format --write ."
   },
   "dependencies": {
     "vue": "^3.5.30"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.4.8",
     "@mdit/plugin-figure": "^0.23.1",
     "@theojs/lumen": "^6.4.5",
     "@types/node": "^25.5.0",

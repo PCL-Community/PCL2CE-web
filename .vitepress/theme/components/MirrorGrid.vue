@@ -1,12 +1,12 @@
 <script setup lang="ts">
 interface MirrorItem {
-  href: string
-  label: string
+  href: string;
+  label: string;
 }
 
 defineProps<{
-  items: MirrorItem[]
-}>()
+  items: MirrorItem[];
+}>();
 </script>
 
 <template>

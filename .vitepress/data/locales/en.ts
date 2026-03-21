@@ -1,4 +1,4 @@
-import type { LocaleMessages } from './index'
+import type { LocaleMessages } from './index';
 
 export const en: LocaleMessages = {
   // Skip link
@@ -7,8 +7,10 @@ export const en: LocaleMessages = {
   // Navigation
   nav: {
     home: '<iconify-icon class="i-mr" icon="mdi:home" style="color:#3498db"></iconify-icon>Home',
-    download: '<iconify-icon class="i-mr" icon="mdi:download" style="color:#2ecc71"></iconify-icon>Download',
-    about: '<iconify-icon class="i-mr" icon="mdi:information" style="color:#9b59b6"></iconify-icon>About',
+    download:
+      '<iconify-icon class="i-mr" icon="mdi:download" style="color:#2ecc71"></iconify-icon>Download',
+    about:
+      '<iconify-icon class="i-mr" icon="mdi:information" style="color:#9b59b6"></iconify-icon>About',
   },
 
   // Theme config
@@ -35,7 +37,7 @@ export const en: LocaleMessages = {
     feedback: 'Issues',
     discussions: 'Discussions',
     beian: '',
-    copyright: 'All Rights Reserved.',
+    copyright: 'MIT License.',
   },
 
   // Download page
@@ -70,7 +72,8 @@ export const en: LocaleMessages = {
   // About page
   about: {
     title: 'PCL Community',
-    subtitle: 'Unofficial community organization, not affiliated with PCL developer.',
+    subtitle:
+      'Unofficial community organization, not affiliated with PCL developer.',
     githubTitle: 'GitHub',
     githubDesc: 'Source code, issues & contributions',
     bilibiliTitle: 'Bilibili',
@@ -78,4 +81,4 @@ export const en: LocaleMessages = {
     joinTitle: 'Join Us',
     joinDesc: 'Join discussions and build together',
   },
-}
+};
