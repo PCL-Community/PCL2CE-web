@@ -249,10 +249,6 @@ a:focus-visible {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.download-btn svg {
-  stroke: #ffffff;
-}
-
 .download-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(2, 102, 193, 0.3);

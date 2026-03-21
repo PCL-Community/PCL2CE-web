@@ -5,10 +5,11 @@ import DefaultTheme from 'vitepress/theme'
 import { h } from 'vue'
 import '@theojs/lumen/style'
 import { BoxCube, Card, CopyText, Footer, Links, Pill } from '@theojs/lumen'
-import { getFooterData, type Lang } from '../data/i18n'
+import { getFooterData, getMessages, type Lang } from '../data/i18n'
 import './style.css'
 import MirrorGrid from './components/MirrorGrid.vue'
 import AboutPage from './components/AboutPage.vue'
+import VideoSection from './components/VideoSection.vue'
 
 export default {
   extends: DefaultTheme,
@@ -16,17 +17,15 @@ export default {
     return h(DefaultTheme.Layout, null, {
       'layout-top': () => {
         const { lang } = useData()
-        const skipText: Record<string, string> = {
-          'zh-CN': '跳转到主要内容',
-          en: 'Skip to main content',
-        }
+        const currentLang = (lang.value || 'zh-CN') as Lang
+        const messages = getMessages(currentLang)
         return h(
           'a',
           {
             href: '#VPContent',
             class: 'skip-to-content',
           },
-          skipText[lang.value] || skipText['zh-CN']
+          messages.skipToContent
         )
       },
       'layout-bottom': () => {
@@ -47,5 +46,6 @@ export default {
     // 注册自定义组件
     app.component('MirrorGrid', MirrorGrid)
     app.component('AboutPage', AboutPage)
+    app.component('VideoSection', VideoSection)
   },
 } satisfies Theme
