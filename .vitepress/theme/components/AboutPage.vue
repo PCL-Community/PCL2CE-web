@@ -26,7 +26,7 @@ const props = defineProps<{
           :class="{ 'about-card-link': card.href }"
         >
           <div class="about-card-icon">
-            <iconify-icon :icon="card.icon" width="28" height="28"></iconify-icon>
+            <iconify-icon :icon="card.icon" width="24" height="24"></iconify-icon>
           </div>
           <div class="about-card-content">
             <h3>{{ card.title }}</h3>
@@ -89,15 +89,22 @@ const props = defineProps<{
   flex-shrink: 0;
   width: 48px;
   height: 48px;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: var(--gradient-primary);
   border-radius: 10px;
   color: white;
+  line-height: 0;
 }
 
-.about-card-icon :deep(svg) {
-  display: block;
+.about-card-icon :deep(iconify-icon) {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 24px !important;
+  height: 24px !important;
+  vertical-align: top !important;
 }
 
 .about-card-content h3 {

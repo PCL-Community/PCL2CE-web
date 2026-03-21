@@ -62,8 +62,6 @@ For ARM-based Windows PCs
   ]"
 />
 
----
-
 ## Historical Versions
 
 If you need an older version of PCL Community Edition, you can download from the following link:

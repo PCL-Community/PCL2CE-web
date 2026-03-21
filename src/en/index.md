@@ -45,20 +45,3 @@ features:
   description="Watch the video to learn about the powerful features of PCL Community Edition"
   videoSrc="https://player.bilibili.com/player.html?aid=113865304048458&bvid=BV1w5wheQEAy&cid=28195815657&p=1&autoplay=0&high_quality=1&danmaku=0"
 />
-
-<ScreenshotsSection
-  title="Interface Preview"
-  description="Get an intuitive look at the interface design and feature layout of PCL Community Edition"
-  :items="[
-    { src: '/img/x1.png', alt: 'Main Interface', title: 'Main Interface', description: 'Clean and intuitive design with dark theme support.' },
-    { src: '/img/x2.png', alt: 'Version Management', title: 'Version Management', description: 'Manage multiple Minecraft versions with one-click switching.' },
-    { src: '/img/x3.png', alt: 'Mod Management', title: 'Mod Management', description: 'Easy mod installation from multiple sources with search.' }
-  ]"
-/>
-
-<DownloadCTA
-  title="Download Now"
-  description="Start your Minecraft journey with the best launcher"
-  buttonText="Download Latest"
-  buttonLink="/en/download"
-/>

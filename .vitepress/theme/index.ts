@@ -7,10 +7,6 @@ import '@theojs/lumen/style'
 import { BoxCube, Card, CopyText, Footer, Links, Pill } from '@theojs/lumen'
 import { getFooterData, type Lang } from '../data/i18n'
 import './style.css'
-import VideoSection from './components/VideoSection.vue'
-import ScreenshotsSection from './components/ScreenshotsSection.vue'
-import DownloadCTA from './components/DownloadCTA.vue'
-import LinkCards from './components/LinkCards.vue'
 import MirrorGrid from './components/MirrorGrid.vue'
 import AboutPage from './components/AboutPage.vue'
 
@@ -49,10 +45,6 @@ export default {
     app.component('Pill', Pill)
     app.component('Copy', CopyText)
     // 注册自定义组件
-    app.component('VideoSection', VideoSection)
-    app.component('ScreenshotsSection', ScreenshotsSection)
-    app.component('DownloadCTA', DownloadCTA)
-    app.component('LinkCards', LinkCards)
     app.component('MirrorGrid', MirrorGrid)
     app.component('AboutPage', AboutPage)
   },
