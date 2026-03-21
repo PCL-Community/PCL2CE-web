@@ -42,7 +42,7 @@ export const en: LocaleMessages = {
 
   // Download page
   download: {
-    title: 'Download PCL Community Edition',
+    title: 'Download PCL CE',
     latestStable: 'Latest Stable Release',
     systemCheck: 'Check System Architecture',
     systemCheckDesc: 'Press **Win + S**, search for **System Information**.',

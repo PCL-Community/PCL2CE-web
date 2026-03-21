@@ -1,10 +1,10 @@
 ---
-title: 下载 PCL 社区版最新版 | Windows X64 / ARM64 开源免费 Minecraft 启动器
-description: 在此下载 PCL 社区版最新稳定版本，支持 Windows X64 与 ARM64 架构，并提供多个镜像线路与历史版本入口
+title: 下载 PCL CE最新版 | Windows X64 / ARM64 开源免费 Minecraft 启动器
+description: 在此下载 PCL CE最新稳定版本，支持 Windows X64 与 ARM64 架构，并提供多个镜像线路与历史版本入口
 keywords: PCL下载,Minecraft启动器下载,PCL社区版下载,启动器下载
 ---
 
-# PCL 社区版下载
+# PCL CE下载
 
 ## 最新稳定版
 
@@ -64,6 +64,6 @@ keywords: PCL下载,Minecraft启动器下载,PCL社区版下载,启动器下载
 
 ## 历史版本下载
 
-如果您需要旧版本的 PCL 社区版，可以从以下链接下载：
+如果您需要旧版本的 PCL CE，可以从以下链接下载：
 
 [历史版本](https://github.com/PCL-Community/PCL2-CE/releases){.mirror-btn}

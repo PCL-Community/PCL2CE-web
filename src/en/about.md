@@ -1,6 +1,6 @@
 ---
-title: About PCL Community Edition | Community-driven Open Source Minecraft Launcher Project
-description: Learn about PCL Community Edition and PCL Community, a non-official yet community-driven open source initiative that maintains launcher tooling and collects player feedback
+title: About PCL CE | Community-driven Open Source Minecraft Launcher Project
+description: Learn about PCL CE and PCL Community, a non-official yet community-driven open source initiative that maintains launcher tooling and collects player feedback
 keywords: PCL Community,PCL About,Open Source Community
 aside: false
 ---

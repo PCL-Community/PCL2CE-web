@@ -7,16 +7,16 @@ import {
 
 // SEO 相关常量
 const SITE_URL = 'https://pclce-web.demo.fis.ink';
-const SITE_NAME = 'PCL 社区版';
+const SITE_NAME = 'PCL CE';
 const DEFAULT_DESCRIPTION =
-  'PCL 社区版是基于 PCL2 构建的开源免费 Minecraft 启动器，提供智能崩溃分析、多文件夹实例管理、资源一键下载与多账号支持';
+  'PCL CE是基于 PCL2 构建的开源免费 Minecraft 启动器，提供智能崩溃分析、多文件夹实例管理、资源一键下载与多账号支持';
 const DEFAULT_KEYWORDS =
   'PCL,PCL2,Minecraft启动器,我的世界启动器,开源启动器,崩溃分析,模组管理,Java管理';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   srcDir: './src',
-  title: 'PCL 社区版',
+  title: 'PCL CE',
   description: '开源免费的 Minecraft 启动器',
   cleanUrls: true,
   sitemap: {
@@ -138,7 +138,7 @@ export default defineConfig({
     root: {
       label: '简体中文',
       lang: 'zh-CN',
-      title: 'PCL 社区版',
+      title: 'PCL CE',
       description: '开源免费的 Minecraft 启动器，支持崩溃分析与多版本管理',
       themeConfig: {
         nav: navTranslations['zh-CN'],
@@ -148,7 +148,7 @@ export default defineConfig({
     en: {
       label: 'English',
       lang: 'en',
-      title: 'PCL Community Edition',
+      title: 'PCL CE',
       description:
         'Open Source & Free Minecraft Launcher with Smart Crash Analysis',
       themeConfig: {

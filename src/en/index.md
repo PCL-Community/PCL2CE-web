@@ -1,6 +1,6 @@
 ---
 layout: home
-title: PCL Community Edition | Open Source Minecraft Launcher
+title: PCL CE | Open Source Minecraft Launcher
 description: Free open-source Minecraft launcher with smart crash analysis, multi-instance management, and one-click resource downloads
 keywords: PCL,PCL2,Minecraft Launcher,Open Source Launcher,Crash Analysis,Mod Management
 
@@ -10,7 +10,7 @@ hero:
   tagline: Built on PCL2 with more features and better experience
   image:
     src: /img/logo.ico
-    alt: PCL Community Edition
+    alt: PCL CE
   actions:
     - theme: brand
       text: Download

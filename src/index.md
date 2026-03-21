@@ -1,7 +1,7 @@
 ---
 layout: home
-title: PCL 社区版官网 | 开源免费的 Minecraft 启动器
-description: PCL 社区版是基于 PCL2 构建的开源免费 Minecraft 启动器，提供智能崩溃分析、多文件夹实例管理、资源一键下载与多账号支持
+title: PCL CE官网 | 开源免费的 Minecraft 启动器
+description: PCL CE是基于 PCL2 构建的开源免费 Minecraft 启动器，提供智能崩溃分析、多文件夹实例管理、资源一键下载与多账号支持
 keywords: PCL,PCL2,Minecraft启动器,我的世界启动器,开源启动器,崩溃分析,模组管理
 
 hero:
@@ -10,7 +10,7 @@ hero:
   tagline: 基于 PCL2 构建，提供更强大的功能和更好的用户体验
   image:
     src: /img/logo.ico
-    alt: PCL 社区版
+    alt: PCL CE
   actions:
     - theme: brand
       text: 下载  

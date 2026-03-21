@@ -1,10 +1,10 @@
 ---
-title: Download PCL Community Edition Latest Release | Free Minecraft Launcher for Windows X64/ARM64
-description: Download the latest stable version of PCL Community Edition for Windows X64 and ARM64, with multiple mirror options and historical releases available
-keywords: PCL Download,Minecraft Launcher Download,PCL Community Edition Download
+title: Download PCL CE Latest Release | Free Minecraft Launcher for Windows X64/ARM64
+description: Download the latest stable version of PCL CE for Windows X64 and ARM64, with multiple mirror options and historical releases available
+keywords: PCL Download,Minecraft Launcher Download,PCL CE Download
 ---
 
-# PCL Community Edition Download
+# PCL CE Download
 
 ## Latest Stable Release
 
@@ -64,6 +64,6 @@ For ARM-based Windows PCs
 
 ## Historical Versions
 
-If you need an older version of PCL Community Edition, you can download from the following link:
+If you need an older version of PCL CE, you can download from the following link:
 
 [Historical Versions](https://github.com/PCL-Community/PCL2-CE/releases){.mirror-btn}

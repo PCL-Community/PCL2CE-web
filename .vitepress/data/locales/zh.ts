@@ -42,7 +42,7 @@ export const zh: LocaleMessages = {
 
   // 下载页面
   download: {
-    title: 'PCL 社区版下载',
+    title: 'PCL CE下载',
     latestStable: '最新稳定版',
     systemCheck: '系统架构检查',
     systemCheckDesc: '按下 **Win + S** 键打开搜索，搜索 **系统信息** 并打开。',
@@ -65,7 +65,7 @@ export const zh: LocaleMessages = {
     arm64Version: 'ARM64 版本',
     arm64Desc: '适用于 ARM 架构的 Windows 电脑',
     historicalVersions: '历史版本下载',
-    historicalDesc: '如果您需要旧版本的 PCL 社区版，可以从以下链接下载：',
+    historicalDesc: '如果您需要旧版本的 PCL CE，可以从以下链接下载：',
     historicalBtn: '历史版本',
     alsoDownload: '你也可以直接在下方的链接中下载',
   },

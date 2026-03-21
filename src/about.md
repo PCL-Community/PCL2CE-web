@@ -1,6 +1,6 @@
 ---
-title: 关于 PCL 社区版 | 社区驱动的开源 Minecraft 启动器项目
-description: 了解 PCL 社区版与 PCL Community：这是一个由玩家共建的非官方开源社区项目，持续维护启动器生态、收集反馈并推动功能改进
+title: 关于 PCL CE | 社区驱动的开源 Minecraft 启动器项目
+description: 了解 PCL CE与 PCL Community：这是一个由玩家共建的非官方开源社区项目，持续维护启动器生态、收集反馈并推动功能改进
 keywords: PCL社区,PCL Community,关于PCL,开源社区
 aside: false
 ---
