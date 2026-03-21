@@ -1,0 +1,190 @@
+@import './blur.css';
+
+/* CSS 变量 */
+:root {
+  --primary-color: #0266c1;
+  --primary-dark: #00264f;
+  --gradient-primary: linear-gradient(135deg, #0266c1 0%, #00264f 100%);
+  --vp-c-brand-1: #0266c1;
+  --vp-c-brand-2: #0252a1;
+  --vp-c-brand-3: #00264f;
+  --vp-c-brand-soft: rgba(2, 102, 193, 0.14);
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(
+    135deg,
+    #00264f 0%,
+    #0266c1 50%,
+    #3e6fc1 100%
+  );
+  --vp-home-hero-image-background-image: linear-gradient(
+    135deg,
+    #00264f 0%,
+    #0266c1 50%,
+    #3e6fc1 100%
+  );
+  --vp-home-hero-image-filter: blur(68px);
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-text: #fff;
+  --vp-button-brand-bg: var(--vp-c-brand-1);
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-hover-text: #fff;
+  --vp-button-brand-hover-bg: var(--vp-c-brand-2);
+  --vp-button-brand-active-border: transparent;
+  --vp-button-brand-active-text: #fff;
+  --vp-button-brand-active-bg: var(--vp-c-brand-3);
+}
+
+.dark {
+  --vp-c-brand-1: #3e6fc1;
+  --vp-c-brand-2: #0266c1;
+  --vp-c-brand-3: #778eaa;
+  --vp-c-brand-soft: rgba(62, 111, 193, 0.14);
+}
+
+/* 基础优化 */
+html {
+  font-display: swap;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* Hero 区域增强 */
+.VPHero .VPImage.image-src {
+  width: 192px !important;
+  height: 192px !important;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+.VPHero .name {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.VPHero .text {
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+/* Logo 样式 */
+.VPNavBar .VPImage.logo {
+  width: 24px !important;
+  height: 24px !important;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+/* 内容区域 */
+.VPContent {
+  min-height: calc(100vh - var(--vp-nav-height) - 64px);
+  padding-bottom: 0 !important;
+}
+
+/* 焦点可见样式 */
+:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* 减少动画偏好 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Hero 响应式模糊 */
+@media (min-width: 640px) {
+  :root {
+    --vp-home-hero-image-filter: blur(80px);
+  }
+}
+
+@media (min-width: 960px) {
+  :root {
+    --vp-home-hero-image-filter: blur(96px);
+  }
+}
+
+/* Feature 卡片样式 */
+.VPFeature {
+  border: none;
+  box-shadow: 0 10px 30px 0 rgb(0 0 0 / 15%);
+  background-color: transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.VPFeatures .items .item {
+  transition: transform 0.3s;
+}
+
+.VPFeatures .items .item:hover {
+  transform: translateY(-5px);
+}
+
+/* 导航栏样式 */
+.VPNavBar.screen-open,
+.VPNavScreenMenuLink,
+.VPNavScreenMenuGroup,
+.VPLocalNav {
+  border-bottom: none;
+}
+
+.divider {
+  display: none;
+}
+
+/* 页脚样式 */
+.footer {
+  padding-top: 24px !important;
+  padding-bottom: 16px !important;
+}
+
+.footer .list-container {
+  margin-top: 0 !important;
+  padding-top: 8px;
+}
+
+.footer .footer-info {
+  margin-bottom: 0 !important;
+}
+
+/* 下载按钮样式 */
+.download-btn,
+.download-btn:link,
+.download-btn:visited {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--vp-c-brand-1);
+  color: #ffffff !important;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(2, 102, 193, 0.3);
+}

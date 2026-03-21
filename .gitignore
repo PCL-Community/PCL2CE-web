@@ -17,8 +17,7 @@ dist-ssr
 !.vscode/extensions.json
 .idea
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+.vitepress/cache/
+.vitepress/dist/
+pnpm-workspace.yaml
+.DS_Store
