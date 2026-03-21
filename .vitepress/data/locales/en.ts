@@ -1,9 +1,6 @@
 import type { LocaleMessages } from './index';
 
 export const en: LocaleMessages = {
-  // Skip link
-  skipToContent: 'Skip to content',
-
   // Navigation
   nav: {
     home: '<iconify-icon class="i-mr" icon="mdi:home" style="color:#3498db"></iconify-icon>Home',

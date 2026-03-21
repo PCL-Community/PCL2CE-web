@@ -7,27 +7,14 @@ import '@theojs/lumen/style';
 import { BoxCube, Card, CopyText, Footer, Links, Pill } from '@theojs/lumen';
 import { getFooterData, getMessages, type Lang } from '../data/i18n';
 import './style.css';
-import MirrorGrid from './components/MirrorGrid.vue';
 import AboutPage from './components/AboutPage.vue';
+import MirrorGrid from './components/MirrorGrid.vue';
 import VideoSection from './components/VideoSection.vue';
 
 export default {
   extends: DefaultTheme,
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
-      'layout-top': () => {
-        const { lang } = useData();
-        const currentLang = (lang.value || 'zh-CN') as Lang;
-        const messages = getMessages(currentLang);
-        return h(
-          'a',
-          {
-            href: '#VPContent',
-            class: 'skip-to-content',
-          },
-          messages.skipToContent,
-        );
-      },
       'layout-bottom': () => {
         const { lang } = useData();
         const currentLang = (lang.value || 'zh-CN') as Lang;

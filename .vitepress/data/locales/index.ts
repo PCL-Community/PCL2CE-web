@@ -1,12 +1,11 @@
 import type { FooterData } from '@theojs/lumen';
-import { zh } from './zh';
 import { en } from './en';
+import { zh } from './zh';
 
 export type Lang = 'zh-CN' | 'en';
 
 // 本地化消息类型定义
 export interface LocaleMessages {
-  skipToContent: string;
   nav: {
     home: string;
     download: string;
@@ -260,4 +259,4 @@ export const getFooterData = (lang: Lang): FooterData => {
 };
 
 // 导出类型和消息
-export { zh, en };
+export { en, zh };

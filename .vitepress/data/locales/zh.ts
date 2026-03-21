@@ -1,9 +1,6 @@
 import type { LocaleMessages } from './index';
 
 export const zh: LocaleMessages = {
-  // 跳转链接
-  skipToContent: '跳转到主要内容',
-
   // 导航栏
   nav: {
     home: '<iconify-icon class="i-mr" icon="mdi:home" style="color:#3498db"></iconify-icon>首页',

@@ -1,8 +1,44 @@
-/* 自定义样式 */
+@import './blur.css';
+
+/* CSS 变量 */
 :root {
   --primary-color: #0266c1;
   --primary-dark: #00264f;
   --gradient-primary: linear-gradient(135deg, #0266c1 0%, #00264f 100%);
+  --vp-c-brand-1: #0266c1;
+  --vp-c-brand-2: #0252a1;
+  --vp-c-brand-3: #00264f;
+  --vp-c-brand-soft: rgba(2, 102, 193, 0.14);
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(
+    135deg,
+    #00264f 0%,
+    #0266c1 50%,
+    #3e6fc1 100%
+  );
+  --vp-home-hero-image-background-image: linear-gradient(
+    135deg,
+    #00264f 0%,
+    #0266c1 50%,
+    #3e6fc1 100%
+  );
+  --vp-home-hero-image-filter: blur(68px);
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-text: #fff;
+  --vp-button-brand-bg: var(--vp-c-brand-1);
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-hover-text: #fff;
+  --vp-button-brand-hover-bg: var(--vp-c-brand-2);
+  --vp-button-brand-active-border: transparent;
+  --vp-button-brand-active-text: #fff;
+  --vp-button-brand-active-bg: var(--vp-c-brand-3);
+}
+
+.dark {
+  --vp-c-brand-1: #3e6fc1;
+  --vp-c-brand-2: #0266c1;
+  --vp-c-brand-3: #778eaa;
+  --vp-c-brand-soft: rgba(62, 111, 193, 0.14);
 }
 
 /* 基础优化 */
@@ -16,21 +52,6 @@ iframe {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
-}
-
-/* 品牌颜色变量 */
-:root {
-  --vp-c-brand-1: #0266c1;
-  --vp-c-brand-2: #0252a1;
-  --vp-c-brand-3: #00264f;
-  --vp-c-brand-soft: rgba(2, 102, 193, 0.14);
-}
-
-.dark {
-  --vp-c-brand-1: #3e6fc1;
-  --vp-c-brand-2: #0266c1;
-  --vp-c-brand-3: #778eaa;
-  --vp-c-brand-soft: rgba(62, 111, 193, 0.14);
 }
 
 /* Hero 区域增强 */
@@ -67,32 +88,8 @@ iframe {
   padding-bottom: 0 !important;
 }
 
-/* 跳转到主要内容链接 */
-.skip-to-content {
-  position: absolute;
-  top: -100%;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 12px 24px;
-  background: var(--vp-c-brand-1);
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 8px;
-  z-index: 9999;
-  transition: top 0.2s;
-}
-
-.skip-to-content:focus {
-  top: 16px;
-}
-
 /* 焦点可见样式 */
-:focus-visible {
-  outline: 2px solid var(--vp-c-brand-1);
-  outline-offset: 2px;
-}
-
+:focus-visible,
 button:focus-visible {
   outline: 2px solid var(--vp-c-brand-1);
   outline-offset: 2px;
@@ -115,33 +112,7 @@ a:focus-visible {
   }
 }
 
-/* Hero 渐变背景 */
-:root {
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: linear-gradient(
-    135deg,
-    #00264f 0%,
-    #0266c1 50%,
-    #3e6fc1 100%
-  );
-  --vp-home-hero-image-background-image: linear-gradient(
-    135deg,
-    #00264f 0%,
-    #0266c1 50%,
-    #3e6fc1 100%
-  );
-  --vp-home-hero-image-filter: blur(68px);
-  --vp-button-brand-border: transparent;
-  --vp-button-brand-text: #fff;
-  --vp-button-brand-bg: var(--vp-c-brand-1);
-  --vp-button-brand-hover-border: transparent;
-  --vp-button-brand-hover-text: #fff;
-  --vp-button-brand-hover-bg: var(--vp-c-brand-2);
-  --vp-button-brand-active-border: transparent;
-  --vp-button-brand-active-text: #fff;
-  --vp-button-brand-active-bg: var(--vp-c-brand-3);
-}
-
+/* Hero 响应式模糊 */
 @media (min-width: 640px) {
   :root {
     --vp-home-hero-image-filter: blur(80px);
@@ -180,42 +151,6 @@ a:focus-visible {
 
 .divider {
   display: none;
-}
-
-.VPNavBar:not(.has-sidebar):not(.home.top) {
-  background-color: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(10px);
-}
-
-.dark .VPNavBar:not(.has-sidebar):not(.home.top) {
-  background-color: rgba(30, 30, 32, 0);
-}
-
-@media (min-width: 960px) {
-  .VPNavBar:not(.home.top) .content-body {
-    background-color: rgba(255, 255, 255, 0);
-    backdrop-filter: blur(10px);
-  }
-
-  .dark .VPNavBar:not(.home.top) .content-body {
-    background-color: rgba(30, 30, 32, 0);
-  }
-}
-
-/* 搜索按钮 */
-.DocSearch-Button {
-  background-color: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(10px);
-}
-
-/* 本地导航 */
-.VPLocalNav {
-  background-color: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(10px);
-}
-
-.dark .VPLocalNav {
-  background-color: rgba(30, 30, 32, 0);
 }
 
 /* 页脚样式 */
