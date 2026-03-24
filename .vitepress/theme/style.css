@@ -148,6 +148,60 @@ a:focus-visible {
   border-bottom: none;
 }
 
+.VPNavBarMenu {
+  justify-content: center;
+}
+
+.VPNavBarMenu .VPNavBarMenuLink,
+.VPNavBarMenu .VPNavBarMenuGroup {
+  justify-content: center;
+}
+
+.VPNavScreenMenuLink,
+.VPNavScreenMenuGroup {
+  text-align: center;
+  justify-content: center;
+}
+
+.VPNavBarExtra .VPNavBarMenuGroup,
+.VPNavBarExtra .VPNavBarMenuGroup .button,
+.VPNavBarExtra .VPNavBarMenuGroup .text {
+  text-align: center;
+  justify-content: center;
+}
+
+.VPNavScreenMenuGroup .button,
+.VPNavScreenMenuGroup .button .text {
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.VPNavScreenTranslations {
+  text-align: center;
+}
+
+.VPNavScreenTranslations .title {
+  justify-content: center;
+  width: 100%;
+}
+
+.VPNavScreenTranslations .list {
+  padding: 4px 0 0 0;
+  text-align: center;
+}
+
+.VPNavScreenTranslations .item {
+  display: flex;
+  justify-content: center;
+}
+
+.VPNavScreenTranslations .link {
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .divider {
   display: none;
 }
