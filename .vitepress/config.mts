@@ -41,6 +41,14 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', href: '/img/logo.ico' }],
     ['meta', { name: 'theme-color', content: '#0066CC' }],
+    [
+      'script',
+      {
+        defer: '',
+        src: 'https://um.fis.ink/script.js',
+        'data-website-id': '4e7333ce-6a82-408f-9ed5-bd0d0784cb5b',
+      },
+    ],
     // SEO 基础标签
     ['meta', { name: 'author', content: 'PCL Community' }],
     ['meta', { name: 'keywords', content: DEFAULT_KEYWORDS }],
