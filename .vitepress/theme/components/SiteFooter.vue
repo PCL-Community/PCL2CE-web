@@ -154,6 +154,10 @@ onMounted(() => (currentYear.value = new Date().getFullYear().toString()));
   max-width: 65%;
 }
 
+.list-container section {
+  text-align: center;
+}
+
 .list-title {
   margin-bottom: 0.5em;
   font-weight: 600;
@@ -162,6 +166,9 @@ onMounted(() => (currentYear.value = new Date().getFullYear().toString()));
 }
 
 .list-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   font-weight: 500;
   font-size: 0.75em;
   line-height: 2.4;
