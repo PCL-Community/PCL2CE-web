@@ -270,6 +270,8 @@ const releaseHtml = computed(() => {
   max-width: 960px;
   margin: 0 auto;
   padding: 2rem 1.5rem 3rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .history-header {
@@ -353,12 +355,14 @@ const releaseHtml = computed(() => {
   position: relative;
   flex: 1;
   min-width: 220px;
+  min-width: 0;
 }
 
 .history-select {
   width: 100%;
   flex: 1;
   min-width: 220px;
+  min-width: 0;
   padding: 0.55rem 0.9rem;
   border-radius: 10px;
   border: 1px solid rgba(2, 102, 193, 0.4);
@@ -390,6 +394,10 @@ const releaseHtml = computed(() => {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .history-select-arrow {
@@ -428,6 +436,7 @@ const releaseHtml = computed(() => {
   gap: 0.75rem;
   text-align: left;
   cursor: pointer;
+  min-width: 0;
 }
 
 .history-select-option:hover {
@@ -436,6 +445,8 @@ const releaseHtml = computed(() => {
 
 .history-select-title {
   font-weight: 600;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .history-changelog {
@@ -464,6 +475,8 @@ const releaseHtml = computed(() => {
   margin: 0 0 0.5rem;
   line-height: 1.55;
   color: inherit;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .history-changelog-body :deep(p) {
@@ -508,6 +521,8 @@ const releaseHtml = computed(() => {
   padding: 0.6rem 0.8rem;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.08);
+  overflow-x: auto;
+  max-width: 100%;
 }
 
 .history-changelog-body :deep(hr) {
@@ -618,6 +633,15 @@ const releaseHtml = computed(() => {
 @media (max-width: 640px) {
   .history-header h1 {
     font-size: 1.6rem;
+  }
+
+  .history-selector {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .history-label {
+    width: 100%;
   }
 }
 </style>
