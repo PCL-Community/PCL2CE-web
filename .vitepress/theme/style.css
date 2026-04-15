@@ -2,27 +2,33 @@
 
 /* CSS 变量 */
 :root {
-  --primary-color: #0266c1;
-  --primary-dark: #00264f;
-  --gradient-primary: linear-gradient(135deg, #0266c1 0%, #00264f 100%);
-  --vp-c-brand-1: #0266c1;
-  --vp-c-brand-2: #0252a1;
-  --vp-c-brand-3: #00264f;
-  --vp-c-brand-soft: rgba(2, 102, 193, 0.14);
+  /* 调整基础背景色，带上清爽的淡蓝色调 */
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-alt: #f6f6f7;
+  --vp-c-bg-elv: #ffffff;
+  --vp-c-bg-soft: #f6f6f7;
+
+  --primary-color: #116ecb;
+  --primary-dark: #0d5aa6;
+  --gradient-primary: linear-gradient(135deg, #116ecb 0%, #4a94e8 100%);
+  --vp-c-brand-1: #116ecb;
+  --vp-c-brand-2: #167ce3;
+  --vp-c-brand-3: #0d5aa6;
+  --vp-c-brand-soft: rgba(17, 110, 203, 0.12);
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: linear-gradient(
     135deg,
-    #00264f 0%,
-    #0266c1 50%,
-    #3e6fc1 100%
+    #0d5aa6 0%,
+    #116ecb 50%,
+    #69a8ed 100%
   );
   --vp-home-hero-image-background-image: linear-gradient(
     135deg,
-    #00264f 0%,
-    #0266c1 50%,
-    #3e6fc1 100%
+    #4a94e8 0%,
+    #116ecb 50%,
+    #8abef2 100%
   );
-  --vp-home-hero-image-filter: blur(68px);
+  --vp-home-hero-image-filter: blur(48px);
   --vp-button-brand-border: transparent;
   --vp-button-brand-text: #fff;
   --vp-button-brand-bg: var(--vp-c-brand-1);
@@ -35,10 +41,16 @@
 }
 
 .dark {
-  --vp-c-brand-1: #3e6fc1;
-  --vp-c-brand-2: #0266c1;
-  --vp-c-brand-3: #778eaa;
-  --vp-c-brand-soft: rgba(62, 111, 193, 0.14);
+  /* 调整深色模式背景，使用偏蓝的深色而不是死黑 */
+  --vp-c-bg: #1b1b1f;
+  --vp-c-bg-alt: #161618;
+  --vp-c-bg-elv: #202127;
+  --vp-c-bg-soft: #202127;
+
+  --vp-c-brand-1: #4a94e8;
+  --vp-c-brand-2: #116ecb;
+  --vp-c-brand-3: #8abef2;
+  --vp-c-brand-soft: rgba(74, 148, 232, 0.16);
 }
 
 /* 基础优化 */
@@ -115,22 +127,23 @@ a:focus-visible {
 /* Hero 响应式模糊 */
 @media (min-width: 640px) {
   :root {
-    --vp-home-hero-image-filter: blur(80px);
+    --vp-home-hero-image-filter: blur(56px);
   }
 }
 
 @media (min-width: 960px) {
   :root {
-    --vp-home-hero-image-filter: blur(96px);
+    --vp-home-hero-image-filter: blur(64px);
   }
 }
 
 /* Feature 卡片样式 */
 .VPFeature {
   border: 1px solid var(--vp-c-divider);
-  box-shadow: 0 10px 30px 0 rgb(0 0 0 / 15%);
-  background-color: transparent;
-  transition: border-color 0.2s;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+  background-color: var(--vp-c-bg-soft);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .VPFeatures .items .item {
@@ -138,6 +151,7 @@ a:focus-visible {
 
 .VPFeatures .items .item:hover .VPFeature {
   border-color: var(--vp-c-brand-1);
+  box-shadow: 0 8px 30px rgba(17, 110, 203, 0.08);
 }
 
 /* 导航栏样式 */

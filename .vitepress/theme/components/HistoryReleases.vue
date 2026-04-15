@@ -154,11 +154,13 @@ const selectedSourceLabel = computed(() => {
 // biome-ignore lint/correctness/noUnusedVariables: used in Vue template
 function toggleMenu() {
   menuOpen.value = !menuOpen.value;
+  if (menuOpen.value) sourceMenuOpen.value = false;
 }
 
 // biome-ignore lint/correctness/noUnusedVariables: used in Vue template
 function toggleSourceMenu() {
   sourceMenuOpen.value = !sourceMenuOpen.value;
+  if (sourceMenuOpen.value) menuOpen.value = false;
 }
 
 // biome-ignore lint/correctness/noUnusedVariables: used in Vue template
@@ -336,7 +338,7 @@ function handleOutsideClick(event: MouseEvent) {
   width: 32px;
   height: 32px;
   border-radius: 999px;
-  border: 3px solid rgba(2, 102, 193, 0.2);
+  border: 3px solid var(--vp-c-brand-soft);
   border-top-color: var(--vp-c-brand-1);
   animation: spin 1s linear infinite;
 }
@@ -398,8 +400,8 @@ function handleOutsideClick(event: MouseEvent) {
   min-width: 0;
   padding: 0.55rem 0.9rem;
   border-radius: 10px;
-  border: 1px solid rgba(2, 102, 193, 0.4);
-  background: linear-gradient(135deg, rgba(2, 102, 193, 0.12), rgba(2, 102, 193, 0.02));
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg);
   color: var(--vp-c-text-1);
   font-weight: 600;
   display: flex;
@@ -409,7 +411,7 @@ function handleOutsideClick(event: MouseEvent) {
 }
 
 .history-select:focus {
-  outline: 2px solid rgba(2, 102, 193, 0.45);
+  outline: 2px solid var(--vp-c-brand-1);
   outline-offset: 2px;
 }
 
@@ -418,7 +420,7 @@ function handleOutsideClick(event: MouseEvent) {
   margin-left: 0.5rem;
   padding: 0.15rem 0.5rem;
   border-radius: 999px;
-  background: rgba(2, 102, 193, 0.18);
+  background: var(--vp-c-brand-soft);
   color: var(--vp-c-brand-1);
   font-size: 0.75rem;
 }
@@ -473,7 +475,7 @@ function handleOutsideClick(event: MouseEvent) {
 }
 
 .history-select-option:hover {
-  background: rgba(2, 102, 193, 0.1);
+  background: var(--vp-c-brand-soft);
 }
 
 .history-select-title {
