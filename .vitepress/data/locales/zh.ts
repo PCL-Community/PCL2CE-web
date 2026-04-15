@@ -71,8 +71,11 @@ export const zh: LocaleMessages = {
 
   history: {
     title: '历史版本下载',
-    subtitle: '选择版本查看更新日志并下载对应安装包。',
+    subtitle: '选择版本并切换下载源后下载对应安装包。',
     selectLabel: '选择版本',
+    sourceLabel: '下载源',
+    sourceGithub: 'GitHub 官方链接',
+    sourceMirror1: '下载线路1',
     loading: '正在获取版本列表…',
     error: '获取失败，请稍后再试。',
     retry: '重试',

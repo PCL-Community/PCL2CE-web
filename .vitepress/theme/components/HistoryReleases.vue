@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import MarkdownIt from 'markdown-it';
 import { useData } from 'vitepress';
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue';
 import { getMessages, type Lang } from '../../data/i18n';
@@ -15,7 +14,6 @@ interface ReleaseItem {
   tag_name: string;
   html_url: string;
   published_at: string;
-  body: string | null;
   prerelease: boolean;
   draft: boolean;
   assets: ReleaseAsset[];
@@ -23,7 +21,8 @@ interface ReleaseItem {
 
 interface DisplayAsset {
   label: string;
-  href: string;
+  officialHref: string;
+  mirrorHref: string;
 }
 
 interface DisplayRelease {
@@ -33,17 +32,21 @@ interface DisplayRelease {
   date: string;
   url: string;
   assets: DisplayAsset[];
-  body: string;
 }
+
+type SourceType = 'github' | 'mirror1';
 
 const API_URL =
   'https://api.github.com/repos/PCL-Community/PCL2-CE/releases?per_page=30';
+const SOURCE_MIRROR_BASE = 'https://download.fishcpy.top/dl/pclce/pcl2ce';
 
 const loading = ref(true);
 const error = ref<string | null>(null);
 const releases = ref<DisplayRelease[]>([]);
 const selectedId = ref<number | null>(null);
 const menuOpen = ref(false);
+const sourceMenuOpen = ref(false);
+const selectedSource = ref<SourceType>('github');
 
 const { lang } = useData();
 const messages = computed(() => {
@@ -58,21 +61,27 @@ function formatDate(value: string) {
   return date.toLocaleDateString();
 }
 
-function matchAssets(assets: ReleaseAsset[]): DisplayAsset[] {
+function buildMirrorHref(tag: string, fileName: string) {
+  return `${SOURCE_MIRROR_BASE}/${encodeURIComponent(tag)}/${fileName}`;
+}
+
+function matchAssets(assets: ReleaseAsset[], tag: string): DisplayAsset[] {
   const result: DisplayAsset[] = [];
-  const x64 = assets.find((asset) => /x64/i.test(asset.name));
+  const x64 = assets.find((asset) => /(x64|amd64)/i.test(asset.name));
   const arm64 = assets.find((asset) => /arm64/i.test(asset.name));
 
   if (x64) {
     result.push({
       label: messages.value.x64Label,
-      href: x64.browser_download_url,
+      officialHref: x64.browser_download_url,
+      mirrorHref: buildMirrorHref(tag, x64.name),
     });
   }
   if (arm64) {
     result.push({
       label: messages.value.arm64Label,
-      href: arm64.browser_download_url,
+      officialHref: arm64.browser_download_url,
+      mirrorHref: buildMirrorHref(tag, arm64.name),
     });
   }
   return result;
@@ -93,7 +102,7 @@ async function loadReleases() {
     const data: ReleaseItem[] = await response.json();
     const filtered = data.filter((item) => !item.prerelease && !item.draft);
     releases.value = filtered.map((item) => {
-      const assets = matchAssets(item.assets || []);
+      const assets = matchAssets(item.assets || [], item.tag_name);
       return {
         id: item.id,
         title: item.name || item.tag_name,
@@ -101,7 +110,6 @@ async function loadReleases() {
         date: formatDate(item.published_at),
         url: item.html_url,
         assets,
-        body: item.body || '',
       };
     });
     selectedId.value = releases.value[0]?.id ?? null;
@@ -126,47 +134,56 @@ const selectedRelease = computed(() => {
   return releases.value.find((item) => item.id === selectedId.value) || null;
 });
 
+// biome-ignore lint/correctness/noUnusedVariables: used in Vue template
+const selectedAssets = computed(() => {
+  if (!selectedRelease.value) return [];
+  return selectedRelease.value.assets.map((asset) => ({
+    label: asset.label,
+    href:
+      selectedSource.value === 'github' ? asset.officialHref : asset.mirrorHref,
+  }));
+});
+
+// biome-ignore lint/correctness/noUnusedVariables: used in Vue template
+const selectedSourceLabel = computed(() => {
+  return selectedSource.value === 'github'
+    ? messages.value.sourceGithub
+    : messages.value.sourceMirror1;
+});
+
+// biome-ignore lint/correctness/noUnusedVariables: used in Vue template
 function toggleMenu() {
   menuOpen.value = !menuOpen.value;
 }
 
+// biome-ignore lint/correctness/noUnusedVariables: used in Vue template
+function toggleSourceMenu() {
+  sourceMenuOpen.value = !sourceMenuOpen.value;
+}
+
+// biome-ignore lint/correctness/noUnusedVariables: used in Vue template
 function selectRelease(id: number) {
   selectedId.value = id;
   menuOpen.value = false;
 }
 
+// biome-ignore lint/correctness/noUnusedVariables: used in Vue template
+function selectSource(source: SourceType) {
+  selectedSource.value = source;
+  sourceMenuOpen.value = false;
+}
+
 function handleOutsideClick(event: MouseEvent) {
   const target = event.target as HTMLElement | null;
   if (!target) return;
-  if (target.closest('.history-select-wrap')) return;
+  if (
+    target.closest('.history-select-wrap') ||
+    target.closest('.history-source-select-wrap')
+  )
+    return;
   menuOpen.value = false;
+  sourceMenuOpen.value = false;
 }
-
-const markdown = new MarkdownIt({
-  html: false,
-  linkify: true,
-  breaks: true,
-});
-
-const releaseBody = computed(() => {
-  const raw = selectedRelease.value?.body || '';
-  const lines = raw.split(/\r?\n/);
-  while (lines.length && lines[0].trim() === '') {
-    lines.shift();
-  }
-  if (lines.length && /^(-{3,}|_{3,}|\*{3,})\s*$/.test(lines[0].trim())) {
-    lines.shift();
-    while (lines.length && lines[0].trim() === '') {
-      lines.shift();
-    }
-  }
-  return lines.join('\n').trim();
-});
-
-const releaseHtml = computed(() => {
-  if (!releaseBody.value) return '';
-  return markdown.render(releaseBody.value);
-});
 </script>
 
 <template>
@@ -228,38 +245,54 @@ const releaseHtml = computed(() => {
         </div>
       </div>
 
-      <div v-if="selectedRelease" class="history-changelog">
-        <div class="history-changelog-header">
-          <div class="history-changelog-title">
-            <h2>{{ selectedRelease.title }}</h2>
-            <span class="history-tag">{{ selectedRelease.tag }}</span>
-          </div>
-          <span class="history-date">{{ selectedRelease.date }}</span>
-        </div>
-        <div v-if="selectedRelease.assets.length > 0" class="history-assets">
-          <a
-            v-for="asset in selectedRelease.assets"
-            :key="asset.href"
-            :href="asset.href"
-            class="history-btn"
+      <div class="history-selector">
+        <label class="history-label" for="history-source-select">
+          {{ messages.sourceLabel }}
+        </label>
+        <div class="history-select-wrap history-source-select-wrap">
+          <button
+            id="history-source-select"
+            type="button"
+            class="history-select"
+            @click="toggleSourceMenu"
           >
-            {{ asset.label }}
-          </a>
+            <span class="history-select-main">
+              {{ selectedSourceLabel }}
+            </span>
+            <span class="history-select-arrow" aria-hidden="true"></span>
+          </button>
+          <div v-if="sourceMenuOpen" class="history-select-menu">
+            <button
+              type="button"
+              class="history-select-option"
+              @click="selectSource('github')"
+            >
+              <span class="history-select-title">{{ messages.sourceGithub }}</span>
+            </button>
+            <button
+              type="button"
+              class="history-select-option"
+              @click="selectSource('mirror1')"
+            >
+              <span class="history-select-title">{{ messages.sourceMirror1 }}</span>
+            </button>
+          </div>
         </div>
-        <div v-else class="history-assets-empty">
-          {{ messages.noAssets }}
-        </div>
-        <div v-if="releaseBody" class="history-changelog-body" v-html="releaseHtml"></div>
-        <p v-else class="history-changelog-empty">
-          {{ messages.noChangelog }}
-        </p>
+      </div>
+
+      <div v-if="selectedAssets.length > 0" class="history-assets">
         <a
-          :href="selectedRelease.url"
-          class="history-release-link"
+          v-for="asset in selectedAssets"
+          :key="asset.href"
+          :href="asset.href"
+          class="history-btn"
           target="_blank"
         >
-          {{ messages.viewOnGithub }}
+          {{ asset.label }}
         </a>
+      </div>
+      <div v-else class="history-assets-empty">
+        {{ messages.noAssets }}
       </div>
     </div>
   </div>
@@ -557,6 +590,7 @@ const releaseHtml = computed(() => {
 .history-assets {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.75rem;
   margin: 0.6rem 0 0.35rem;
 }
