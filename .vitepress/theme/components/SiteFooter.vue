@@ -117,7 +117,7 @@ onMounted(() => (currentYear.value = new Date().getFullYear().toString()));
         >
           {{ footer.author.startYear ? footer.author.startYear + ' - ' : '' }}{{ currentYear }}
           {{ footer.author.name }}
-          {{ footer.author.text || 'All Rights Reserved.' }}
+          {{ (footer.author.text && footer.author.text !== 'MIT License.') ? footer.author.text : '' }}
         </a>
       </span>
     </div>

@@ -66,6 +66,9 @@ export interface LocaleMessages {
     title: string;
     subtitle: string;
     selectLabel: string;
+    sourceLabel: string;
+    sourceGithub: string;
+    sourceMirror1: string;
     loading: string;
     error: string;
     retry: string;

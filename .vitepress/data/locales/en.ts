@@ -70,8 +70,11 @@ export const en: LocaleMessages = {
 
   history: {
     title: 'Historical Releases',
-    subtitle: 'Fetch historical releases and download links from GitHub.',
+    subtitle: 'Select a release, choose source, then download the installer.',
     selectLabel: 'Select a release',
+    sourceLabel: 'Download source',
+    sourceGithub: 'GitHub Official',
+    sourceMirror1: 'Mirror 1 (Accelerated)',
     loading: 'Loading releases…',
     error: 'Failed to load releases.',
     retry: 'Retry',

@@ -46,7 +46,7 @@ keywords: PCL下载,Minecraft启动器下载,PCL社区版下载,启动器下载
   :items="[
     { href: 'https://github.com/PCL-Community/PCL2-CE/releases/latest/download/PCL2_CE_Release_x64.exe', label: 'GitHub' },
     { href: 'https://download.fishcpy.top/dl/pclce/pcl2ce/PCL2_CE_Release_x64.exe', label: '线路1' },
-    { href: 'https://scdn.星.fun/PCL2_CE_Release_x64.exe', label: '线路4' }
+    { href: 'https://scdn.星.fun/PCL2_CE_Release_x64.exe', label: '线路2' }
   ]"
 />
 
@@ -58,7 +58,7 @@ keywords: PCL下载,Minecraft启动器下载,PCL社区版下载,启动器下载
   :items="[
     { href: 'https://github.com/PCL-Community/PCL2-CE/releases/latest/download/PCL2_CE_Release_ARM64.exe', label: 'GitHub' },
     { href: 'https://download.fishcpy.top/dl/pclce/pcl2ce/PCL2_CE_Release_ARM64.exe', label: '线路1' },
-    { href: 'https://scdn.星.fun/PCL2_CE_Release_ARM64.exe', label: '线路4' }
+    { href: 'https://scdn.星.fun/PCL2_CE_Release_ARM64.exe', label: '线路2' }
   ]"
 />
 

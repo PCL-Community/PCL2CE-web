@@ -9,6 +9,8 @@ import { getFooterData, getMessages, type Lang } from '../data/i18n';
 import './style.css';
 import AboutPage from './components/AboutPage.vue';
 import HistoryReleases from './components/HistoryReleases.vue';
+import HomeUnderline from './components/HomeUnderline.vue';
+import ImageGallery from './components/ImageGallery.vue';
 import MirrorGrid from './components/MirrorGrid.vue';
 import SiteFooter from './components/SiteFooter.vue';
 import VideoSection from './components/VideoSection.vue';
@@ -37,5 +39,7 @@ export default {
     app.component('AboutPage', AboutPage);
     app.component('HistoryReleases', HistoryReleases);
     app.component('VideoSection', VideoSection);
+    app.component('HomeUnderline', HomeUnderline);
+    app.component('ImageGallery', ImageGallery);
   },
 } satisfies Theme;
