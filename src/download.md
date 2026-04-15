@@ -32,7 +32,7 @@ keywords: PCL下载,Minecraft启动器下载,PCL社区版下载,启动器下载
 
 如果你有 Mirror 酱 CDK 可以直接使用此高速下载源
 
-[Mirror 酱下载](https://mirrorchyan.com/zh/projects?rid=PCL2-CE&source=pcl2ce-gh-release){.download-btn}
+[Mirror 酱下载](https://mirrorchyan.com/zh/projects?rid=PCL2-CE&source=pcl2ce-web){.download-btn}
 
 你也可以直接在下方的链接中下载
 
