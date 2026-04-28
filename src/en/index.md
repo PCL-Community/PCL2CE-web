@@ -45,7 +45,7 @@ features:
 <VideoSection
   title="Demo Video"
   description="Watch to explore PCL CE's powerful features"
-  videoSrc="https://player.bilibili.com/player.html?aid=113865304048458&bvid=BV1w5wheQEAy&cid=28195815657&p=1&autoplay=0&high_quality=3&danmaku=0"
+  videoSrc="/video/hero.mp4"
 />
 
 <ImageGallery :images="[
