@@ -1,9 +1,15 @@
 <script setup lang="ts">
-defineProps<{
+import { computed } from 'vue';
+
+const props = defineProps<{
   title: string;
   description: string;
   videoSrc: string;
 }>();
+
+const isLocalVideo = computed(() => {
+  return props.videoSrc.endsWith('.mp4') || props.videoSrc.endsWith('.webm');
+});
 </script>
 
 <template>
@@ -11,7 +17,20 @@ defineProps<{
     <h2>{{ title }}</h2>
     <p>{{ description }}</p>
     <div class="video-container">
+      <video
+        v-if="isLocalVideo"
+        :src="videoSrc"
+        autoplay
+        loop
+        muted
+        playsinline
+        controls
+        controlslist="nofullscreen nodownload"
+        disablepictureinpicture
+        @dblclick.prevent
+      ></video>
       <iframe
+        v-else
         :src="videoSrc"
         frameborder="0"
         allow="autoplay; fullscreen"
@@ -45,7 +64,7 @@ defineProps<{
 .video-container {
   position: relative;
   width: 100%;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   border-radius: 12px;
   overflow: hidden;
@@ -53,13 +72,15 @@ defineProps<{
   aspect-ratio: 16 / 9;
 }
 
-.video-container iframe {
+.video-container iframe,
+.video-container video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   border: none;
+  object-fit: cover;
 }
 
 @media (max-width: 768px) {
