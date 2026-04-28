@@ -1,8 +1,8 @@
 // https://vitepress.dev/guide/custom-theme
 import type { EnhanceAppContext, Theme } from 'vitepress';
-import { useData } from 'vitepress';
+import { useData, useRouter } from 'vitepress';
 import DefaultTheme from 'vitepress/theme';
-import { h } from 'vue';
+import { h, onMounted, watch } from 'vue';
 import '@theojs/lumen/style';
 import { BoxCube, Card, CopyText, Links, Pill } from '@theojs/lumen';
 import { getFooterData, getMessages, type Lang } from '../data/i18n';
@@ -27,7 +27,7 @@ export default {
       },
     });
   },
-  enhanceApp: ({ app }: EnhanceAppContext) => {
+  enhanceApp: ({ app, router }: EnhanceAppContext) => {
     // 注册 lumen 组件
     app.component('BoxCube', BoxCube);
     app.component('Card', Card);
@@ -41,5 +41,19 @@ export default {
     app.component('VideoSection', VideoSection);
     app.component('HomeUnderline', HomeUnderline);
     app.component('ImageGallery', ImageGallery);
+
+    if (typeof window !== 'undefined') {
+      router.onAfterRouteChanged = (to: string) => {
+        setTimeout(() => {
+          if ((window as any).umami) {
+            (window as any).umami.track((props: any) => ({
+              ...props,
+              url: to,
+              referrer: document.referrer,
+            }));
+          }
+        }, 100);
+      };
+    }
   },
 } satisfies Theme;
