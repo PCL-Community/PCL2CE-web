@@ -53,7 +53,7 @@ export const en: LocaleMessages = {
     tipArm64: '**ARM64** is for devices like Surface Pro X',
     tipUnsure: 'Unsure? Try **X64** first',
     privacyTitle: 'Privacy Notice',
-    privacyDesc: 'By downloading and running, you agree to our privacy policy:',
+    privacyDesc: 'By downloading and running, You agree to our privacy policy:',
     mirrorChyanTitle: 'MirrorChyan Download',
     mirrorChyanDesc: 'Use MirrorChyan CDK for high-speed download',
     mirrorChyanBtn: 'MirrorChyan Download',
@@ -69,8 +69,8 @@ export const en: LocaleMessages = {
   },
 
   region: {
-    blocked: 'Downloads are not available in your country or region',
-    hint: 'Sorry, this content is currently unavailable in your region.',
+    blocked: 'Downloads are not available in Your country or region',
+    hint: 'Sorry, this content is currently unavailable in Your region.',
   },
 
   history: {

@@ -56,7 +56,7 @@ export const zh: LocaleMessages = {
     privacyDesc:
       '如果您点击下方任意下载并运行程序，代表同意我们的隐私协议，隐私协议请点击下方链接查看：',
     mirrorChyanTitle: 'Mirror 酱高速下载',
-    mirrorChyanDesc: '如果你有 Mirror 酱 CDK 可以直接使用此高速下载源',
+    mirrorChyanDesc: '如果您有 Mirror 酱 CDK 可以直接使用此高速下载源',
     mirrorChyanBtn: 'Mirror 酱下载',
     downloadLinks: '下载链接',
     x64Version: 'X64 版本',
@@ -66,7 +66,7 @@ export const zh: LocaleMessages = {
     historicalVersions: '历史版本下载',
     historicalDesc: '如果您需要旧版本的 PCL CE，可以从以下链接下载：',
     historicalBtn: '历史版本',
-    alsoDownload: '你也可以直接在下方的链接中下载',
+    alsoDownload: '您也可以直接在下方的链接中下载',
   },
 
   region: {
