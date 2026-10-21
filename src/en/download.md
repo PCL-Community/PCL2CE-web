@@ -24,13 +24,13 @@ Check **System Type**:
 
 ### Privacy Policy Notice
 
-By clicking any download button below and running the program, you agree to our privacy policy. Please click the link below to view the privacy policy:
+By clicking any download button below and running the program, You agree to our privacy policy. Please click the link below to view the privacy policy:
 
 [https://www.pclc.cc/privacy/](https://www.pclc.cc/privacy/)
 
 ### MirrorChyan High-Speed Download
 
-If you have a MirrorChyan CDK, you can use this high-speed download source directly
+If You have a MirrorChyan CDK, You can use this high-speed download source directly
 
 <RegionGate>
 
@@ -68,6 +68,6 @@ For ARM-based Windows PCs
 
 ## Historical Versions
 
-If you need an older version of PCL CE, you can download from the following link:
+If You need an older version of PCL CE, You can download from the following link:
 
 [Historical Versions](/en/history){.mirror-btn}

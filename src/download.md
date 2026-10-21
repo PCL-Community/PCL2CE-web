@@ -30,7 +30,7 @@ keywords: PCL下载,Minecraft启动器下载,PCL社区版下载,启动器下载
 
 ### Mirror 酱高速下载
 
-如果你有 Mirror 酱 CDK 可以直接使用此高速下载源
+如果您有 Mirror 酱 CDK 可以直接使用此高速下载源
 
 <RegionGate>
 
@@ -38,7 +38,7 @@ keywords: PCL下载,Minecraft启动器下载,PCL社区版下载,启动器下载
 
 </RegionGate>
 
-你也可以直接在下方的链接中下载
+您也可以直接在下方的链接中下载
 
 ## 下载链接
 

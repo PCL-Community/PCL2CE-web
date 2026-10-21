@@ -56,11 +56,7 @@ const messages = computed(() => {
 });
 
 // biome-ignore lint/correctness/noUnusedVariables: used in Vue template
-const {
-  blocked,
-  message: blockedMessage,
-  hint: blockedHint,
-} = useRegionGuard();
+const { blocked, message: blockedText, hint: blockedHint } = useRegionGuard();
 
 function formatDate(value: string) {
   if (!value) return '';
@@ -200,10 +196,15 @@ function handleOutsideClick(event: MouseEvent) {
   <div class="history-releases">
     <div class="history-header">
       <h1>{{ messages.title }}</h1>
-      <p>{{ messages.subtitle }}</p>
+      <p v-if="!blocked">{{ messages.subtitle }}</p>
     </div>
 
-    <div v-if="loading" class="history-state">
+    <div v-if="blocked" class="history-blocked">
+      <div>{{ blockedText }}</div>
+      <div class="history-blocked-hint">{{ blockedHint }}</div>
+    </div>
+
+    <div v-else-if="loading" class="history-state">
       <div class="history-loading"></div>
       <span>{{ messages.loading }}</span>
     </div>
@@ -290,11 +291,7 @@ function handleOutsideClick(event: MouseEvent) {
         </div>
       </div>
 
-      <div v-if="blocked" class="history-assets-blocked">
-        <div>{{ blockedMessage }}</div>
-        <div class="history-assets-blocked-hint">{{ blockedHint }}</div>
-      </div>
-      <div v-else-if="selectedAssets.length > 0" class="history-assets">
+      <div v-if="selectedAssets.length > 0" class="history-assets">
         <a
           v-for="asset in selectedAssets"
           :key="asset.href"
@@ -630,9 +627,9 @@ function handleOutsideClick(event: MouseEvent) {
   font-size: 0.9rem;
 }
 
-.history-assets-blocked {
-  margin-top: 0.6rem;
-  padding: 0.75rem 1rem;
+.history-blocked {
+  margin-top: 1rem;
+  padding: 1.5rem;
   border: 1px dashed var(--vp-c-divider);
   border-radius: 12px;
   background: var(--vp-c-bg-soft);
@@ -640,7 +637,7 @@ function handleOutsideClick(event: MouseEvent) {
   color: var(--vp-c-text-2);
 }
 
-.history-assets-blocked-hint {
+.history-blocked-hint {
   margin-top: 0.35rem;
   font-size: 0.9rem;
   color: var(--vp-c-text-3);
