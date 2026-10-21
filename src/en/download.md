@@ -32,7 +32,11 @@ By clicking any download button below and running the program, you agree to our 
 
 If you have a MirrorChyan CDK, you can use this high-speed download source directly
 
+<RegionGate>
+
 [MirrorChyan Download](https://mirrorchyan.com/en/projects?rid=PCL2-CE&source=pcl2ce-gh-release){.download-btn}
+
+</RegionGate>
 
 You can also download directly from the links below
 

@@ -68,6 +68,11 @@ export const en: LocaleMessages = {
     alsoDownload: 'Or download directly from:',
   },
 
+  region: {
+    blocked: 'Downloads are not available in your country or region',
+    hint: 'Sorry, this content is currently unavailable in your region.',
+  },
+
   history: {
     title: 'Historical Releases',
     subtitle: 'Select a release, choose source, then download the installer.',

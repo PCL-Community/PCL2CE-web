@@ -2,6 +2,7 @@
 import { useData } from 'vitepress';
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue';
 import { getMessages, type Lang } from '../../data/i18n';
+import { useRegionGuard } from '../composables/useRegionGuard';
 
 interface ReleaseAsset {
   name: string;
@@ -53,6 +54,13 @@ const messages = computed(() => {
   const currentLang = (lang.value || 'zh-CN') as Lang;
   return getMessages(currentLang).history;
 });
+
+// biome-ignore lint/correctness/noUnusedVariables: used in Vue template
+const {
+  blocked,
+  message: blockedMessage,
+  hint: blockedHint,
+} = useRegionGuard();
 
 function formatDate(value: string) {
   if (!value) return '';
@@ -282,7 +290,11 @@ function handleOutsideClick(event: MouseEvent) {
         </div>
       </div>
 
-      <div v-if="selectedAssets.length > 0" class="history-assets">
+      <div v-if="blocked" class="history-assets-blocked">
+        <div>{{ blockedMessage }}</div>
+        <div class="history-assets-blocked-hint">{{ blockedHint }}</div>
+      </div>
+      <div v-else-if="selectedAssets.length > 0" class="history-assets">
         <a
           v-for="asset in selectedAssets"
           :key="asset.href"
@@ -616,6 +628,22 @@ function handleOutsideClick(event: MouseEvent) {
   margin: 0.75rem 0 0.5rem;
   color: var(--vp-c-text-2);
   font-size: 0.9rem;
+}
+
+.history-assets-blocked {
+  margin-top: 0.6rem;
+  padding: 0.75rem 1rem;
+  border: 1px dashed var(--vp-c-divider);
+  border-radius: 12px;
+  background: var(--vp-c-bg-soft);
+  text-align: center;
+  color: var(--vp-c-text-2);
+}
+
+.history-assets-blocked-hint {
+  margin-top: 0.35rem;
+  font-size: 0.9rem;
+  color: var(--vp-c-text-3);
 }
 
 .history-release-link {
