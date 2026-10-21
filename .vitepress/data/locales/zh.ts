@@ -69,6 +69,11 @@ export const zh: LocaleMessages = {
     alsoDownload: '你也可以直接在下方的链接中下载',
   },
 
+  region: {
+    blocked: '您所在的国家或地区暂不支持下载',
+    hint: '很抱歉，该内容目前无法在您的所在地区提供。',
+  },
+
   history: {
     title: '历史版本下载',
     subtitle: '选择版本并切换下载源后下载对应安装包。',

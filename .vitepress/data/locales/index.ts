@@ -62,6 +62,10 @@ export interface LocaleMessages {
     historicalBtn: string;
     alsoDownload: string;
   };
+  region: {
+    blocked: string;
+    hint: string;
+  };
   history: {
     title: string;
     subtitle: string;

@@ -12,6 +12,7 @@ import HistoryReleases from './components/HistoryReleases.vue';
 import HomeUnderline from './components/HomeUnderline.vue';
 import ImageGallery from './components/ImageGallery.vue';
 import MirrorGrid from './components/MirrorGrid.vue';
+import RegionGate from './components/RegionGate.vue';
 import SiteFooter from './components/SiteFooter.vue';
 import VideoSection from './components/VideoSection.vue';
 
@@ -36,6 +37,7 @@ export default {
     app.component('Copy', CopyText);
     // 注册自定义组件
     app.component('MirrorGrid', MirrorGrid);
+    app.component('RegionGate', RegionGate);
     app.component('AboutPage', AboutPage);
     app.component('HistoryReleases', HistoryReleases);
     app.component('VideoSection', VideoSection);
